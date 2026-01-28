@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NetVora — Monitoreo y Análisis</title>
+
+  <!-- CSS libs -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shorthandcss@1.1.1/dist/shorthand.min.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Muli:200,300,400,500,600,700,800,900&display=swap" />
+  
+  <link rel="stylesheet" type="text/css"
+    href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+  <meta name="description"
+    content="NetVora: monitoreo en tiempo real, clasificación por temas, análisis de sentimiento y dashboards para X." />
+
+  <!-- ✅ CSS propio -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body class="muli nv-body">
+
+  <!-- NAV -->
+  <nav class="nv-nav w-100pc flex flex-column md-flex-row md-px-10 py-5">
+    <div class="flex justify-between items-center">
+      <a href="#home" class="flex items-center p-2 mr-4 no-underline">
+        <img class="nv-logo  w-auto" src="assets/images/1.png" alt="NetVora logo" />
+      </a>
+
+      <a data-toggle="toggle-nav" data-target="#nav-items" href="#"
+        class="flex items-center ml-auto md-hidden nv-nav-burger p-2 br-8 no-underline">
+        <i data-feather="menu"></i>
+      </a>
+    </div>
+
+    <div id="nav-items"
+      class="nv-nav-items hidden flex sm-w-100pc flex-column md-flex md-flex-row md-justify-end items-center">
+      <a href="#home" class="nv-link fs-s1 mx-3 py-3 no-underline">Inicio</a>
+      <a href="#features" class="nv-link fs-s1 mx-3 py-3 no-underline">Capacidades</a>
+      <a href="#how" class="nv-link fs-s1 mx-3 py-3 no-underline">Cómo funciona</a>
+      <a href="#pricing" class="nv-link fs-s1 mx-3 py-3 no-underline">Planes</a>
+      <a href="#login" class="nv-btn nv-btn-primary no-underline mx-5">Iniciar sesión</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home" class="nv-hero min-h-100vh flex items-center">
+    <div class="nv-container w-100pc mx-auto px-5 md-px-l5">
+      <div class="nv-hero-grid">
+
+        <!-- Texto -->
+        <div class="nv-hero-copy">
+          
+
+          <h1 class="nv-h1 fw-900">
+            NetVora: monitoreo y análisis<br />
+            de conversación digital
+          </h1>
+
+          <p class="nv-sub fw-600 mt-6">
+            Mira en una sola vista qué temas suben, qué tono tiene la conversación y qué nombres/lugares aparecen más.
+            Ideal para entender “qué pasa” sin leer miles de publicaciones.
+          </p>
+
+          <form class="nv-form br-12 mt-10 inline-flex" action="https://formspree.io/f/XXXXXXX" method="POST">
+          <input type="email" name="email" class="nv-input input-lg" placeholder="Tu email" required />
+          <button class="nv-btn nv-btn-soft button-lg" type="submit">Solicitar demo</button>
+            </form>
+
+          <div class="nv-hero-mini mt-6">
+            <div class="nv-mini-item"><span class="nv-dot"></span><span>Temas + sentimiento</span></div>
+            <div class="nv-mini-item"><span class="nv-dot"></span><span>Personas, organizaciones, lugares</span></div>
+            <div class="nv-mini-item"><span class="nv-dot"></span><span>Timeline y ranking de cuentas</span></div>
+          </div>
+        </div>
+
+        <!-- Imagen -->
+        <div class="nv-hero-media">
+          <img class="nv-hero-img"
+            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1400&q=80"
+            alt="Vista previa de dashboard" loading="lazy" />
+          <div class="nv-card-float">
+            <div class="nv-card-title">Vista rápida</div>
+            <div class="nv-card-sub">Resumen + timeline + principales actores</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="nv-section p-10 md-p-l5">
+    <div class="md-w-75pc">
+      <h2 class="nv-h2 fw-900 lh-2">Convierte conversaciones en inteligencia accionable</h2>
+      <p class="nv-p fw-600 opacity-80 my-5">
+        NetVora te muestra el <strong>qué</strong>, <strong>quién</strong> y <strong>dónde</strong> de la conversación:
+        temas, tono y evolución por día, en una vista clara.
+      </p>
+    </div>
+
+    <div class="nv-features flex flex-column md-flex-row mx-auto">
+      <div class="w-100pc md-w-33pc">
+        <div class="nv-card nv-feature-card br-16 p-6 m-5">
+          <div class="nv-icon flex justify-center items-center w-l5 h-l5 br-round mb-5">
+            <i data-feather="radio" class="w-l5"></i>
+          </div>
+          <h4 class="fw-800 fs-m3 mb-3">Monitoreo en tiempo real</h4>
+          <div class="nv-p fw-600 opacity-80">
+            Detecta cuándo un tema sube de golpe y qué tan fuerte se vuelve en el tiempo.
+          </div>
+        </div>
+      </div>
+
+      <div class="w-100pc md-w-33pc">
+        <div class="nv-card nv-feature-card br-16 p-6 m-5">
+          <div class="nv-icon flex justify-center items-center w-l5 h-l5 br-round mb-5">
+            <i data-feather="users" class="w-l5"></i>
+          </div>
+          <h4 class="fw-800 fs-m3 mb-3">Actores y entidades clave</h4>
+          <div class="nv-p fw-600 opacity-80">
+            Identifica personas, organizaciones y lugares más mencionados por tema y período.
+          </div>
+        </div>
+      </div>
+
+      <div class="w-100pc md-w-33pc">
+        <div class="nv-card nv-feature-card br-16 p-6 m-5">
+          <div class="nv-icon flex justify-center items-center w-l5 h-l5 br-round mb-5">
+            <i data-feather="bar-chart-2" class="w-l5"></i>
+          </div>
+          <h4 class="fw-800 fs-m3 mb-3">Dashboards listos para decisión</h4>
+          <div class="nv-p fw-600 opacity-80">
+            Resumen, sentimiento, timeline y ranking de cuentas: listo para reportar.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDER (con imágenes, sin botones internos, flechas se quedan) -->
+  <section class="relative nv-slider-wrap">
+    <div id="slider-1" class="nv-slider">
+
+      <div class="p-10 md-p-l10 flex justify-center items-center flex-column text-center">
+        <img class="nv-slide-img"
+          src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1400&q=80"
+          alt="Análisis de tendencias" loading="lazy" />
+        <h2 class="nv-h2 fw-900 mt-6">Detecta cuándo un tema se vuelve importante</h2>
+        <p class="nv-p fw-600 opacity-80 my-4 md-w-60pc">
+          NetVora te muestra en qué momento un tema empieza a crecer y cuándo alcanza su punto más alto.
+        </p>
+      </div>
+
+      <div class="p-10 md-p-l10 flex justify-center items-center flex-column text-center">
+        <img class="nv-slide-img"
+          src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1400&q=80"
+          alt="Dashboard de análisis" loading="lazy" />
+        <h2 class="nv-h2 fw-900 mt-6">Entiende un tema sin leer miles de publicaciones</h2>
+        <p class="nv-p fw-600 opacity-80 my-4 md-w-60pc">
+          En una sola vista ves cantidad, tono (positivo/negativo) y los nombres que aparecen más.
+        </p>
+      </div>
+
+      <div class="p-10 md-p-l10 flex justify-center items-center flex-column text-center">
+        <img class="nv-slide-img"
+          src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=1400&q=80"
+          alt="Filtros y búsqueda" loading="lazy" />
+        <h2 class="nv-h2 fw-900 mt-6">Filtra por fechas y cuentas</h2>
+        <p class="nv-p fw-600 opacity-80 my-4 md-w-60pc">
+          Seleccionas fechas y cuentas (medios/personas/entidades) y NetVora recalcula todo automáticamente.
+        </p>
+      </div>
+
+    </div>
+
+    <ul class="absolute list-none w-100pc flex justify-between top-50pc nv-slider-arrows">
+      <li>
+        <button class="prev nv-arrow ml-10 br-round bg-transparent flex justify-center items-center p-2 outline-none">
+          <i data-feather="chevron-left"></i>
+        </button>
+      </li>
+      <li>
+        <button class="next nv-arrow mr-10 br-round bg-transparent flex justify-center items-center p-2 outline-none">
+          <i data-feather="chevron-right"></i>
+        </button>
+      </li>
+    </ul>
+  </section>
+
+  <!-- BIG TEXT -->
+  <section class="p-10 md-py-10">
+    <div class="w-100pc md-w-70pc mx-auto py-10">
+      <h2 class="nv-h2 md-fs-xl1 fw-900 lh-2">
+        Convierte ruido en señales: <span class="nv-underline">tendencias, tono y actores clave</span> en un solo lugar.
+      </h2>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how" class="nv-section p-10 md-p-l10">
+    <div class="md-w-75pc">
+      <h2 class="nv-h2 fw-900 lh-1">Cómo funciona NetVora en 3 pasos:</h2>
+      <p class="nv-p fw-600 opacity-80 my-5">
+        
+      </p>
+    </div>
+
+    <div class="nv-how flex flex-column md-flex-row md-w-90pc mx-auto">
+
+      <div class="w-100pc md-w-33pc">
+        <div class="nv-card nv-how-card br-16 p-6 m-5 pointer hover-scale-up-1 ease-300">
+          <div class="flex items-center mb-5">
+            <div class="nv-step flex justify-center items-center w-l4 h-l4 br-round mr-4"><span class="fw-900">1</span></div>
+            <h4 class="fw-900 fs-m2 m-0">Elige qué cuentas seguir</h4>
+          </div>
+          <p class="nv-p fw-600 opacity-85">
+            Seleccionas cuentas de <strong>medios</strong>, <strong>personas</strong> o <strong>entidades</strong>.
+          </p>
+          <ul class="nv-how-list list-none mt-4 p-0">
+            <li class="nv-how-item">• Medios (noticias)</li>
+            <li class="nv-how-item">• Personas (figuras públicas)</li>
+            <li class="nv-how-item">• Entidades (instituciones)</li>
+          </ul>
+          <div class="nv-how-note mt-5 nv-muted fs-s3 italic">Tip: empieza con 20–50 cuentas clave.</div>
+        </div>
+      </div>
+
+      <div class="w-100pc md-w-33pc">
+        <div class="nv-card nv-how-card br-16 p-6 m-5 pointer hover-scale-up-1 ease-300">
+          <div class="flex items-center mb-5">
+            <div class="nv-step flex justify-center items-center w-l4 h-l4 br-round mr-4"><span class="fw-900">2</span></div>
+            <h4 class="fw-900 fs-m2 m-0">NetVora lo organiza por ti</h4>
+          </div>
+          <p class="nv-p fw-600 opacity-85">
+            Agrupa por <strong>tema</strong>, detecta el <strong>tono</strong> y resalta <strong>nombres y lugares</strong>.
+          </p>
+          <ul class="nv-how-list list-none mt-4 p-0">
+            <li class="nv-how-item">• Tema (política, economía, etc.)</li>
+            <li class="nv-how-item">• Tono de la conversación</li>
+            <li class="nv-how-item">• Nombres y lugares</li>
+          </ul>
+          <div class="nv-how-note mt-5 nv-muted fs-s3 italic">Listo para ver por fechas.</div>
+        </div>
+      </div>
+
+      <div class="w-100pc md-w-33pc">
+        <div class="nv-card nv-how-card br-16 p-6 m-5 pointer hover-scale-up-1 ease-300">
+          <div class="flex items-center mb-5">
+            <div class="nv-step flex justify-center items-center w-l4 h-l4 br-round mr-4"><span class="fw-900">3</span></div>
+            <h4 class="fw-900 fs-m2 m-0">Mira el resumen y decide</h4>
+          </div>
+          <p class="nv-p fw-600 opacity-85">
+            Aqui encontrarás toda la información que buscas, concisa, precisa y relevante 
+          </p>
+          <ul class="nv-how-list list-none mt-4 p-0">
+            <li class="nv-how-item">• Total de publicaciones</li>
+            <li class="nv-how-item">• Timeline por día</li>
+            <li class="nv-how-item">• Top cuentas y entidades</li>
+          </ul>
+          <div class="nv-how-note mt-5 nv-muted fs-s3 italic">Ideal para reportes y alertas.</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+    <!-- GUIDE: CATEGORÍAS + ENTIDADES + SENTIMIENTO -->
+  <!-- GUIDE: CATEGORÍAS · ACTORES · SENTIMIENTO -->
+<section id="guide" class="nv-section nv-guide p-10 md-p-l10">
+  <div class="nv-container w-100pc mx-auto px-5 md-px-l5">
+
+    <div class="md-w-75pc mb-6">
+      <h2 class="nv-h2 fw-900 lh-1">Cómo organiza NetVora la conversación</h2>
+      <p class="nv-p fw-600 opacity-85 mt-4">
+        Cada publicación se clasifica por <strong>tema</strong>, se le asignan <strong>actores</strong>
+        y se analiza su <strong>tono</strong>.
+      </p>
+    </div>
+
+    <div class="nv-guide-grid">
+
+      <!-- CATEGORÍAS -->
+      <div class="nv-card nv-guide-card br-16 p-6">
+        <div class="nv-guide-titleRow">
+          <div class="nv-guide-ico"><i data-feather="grid"></i></div>
+          <h3 class="nv-guide-title fw-900 m-0">Categorías</h3>
+        </div>
+
+        <p class="nv-p fw-600 opacity-85 mt-4">
+          Definen <strong>de qué trata</strong> la publicación.
+        </p>
+
+        <div class="nv-guide-chips mt-4">
+          <span class="nv-chip">Política</span>
+          <span class="nv-chip">Economía</span>
+          <span class="nv-chip">Deportes</span>
+          <span class="nv-chip">Seguridad</span>
+          <span class="nv-chip">Salud</span>
+          <span class="nv-chip">Gestiones Públicas</span>
+          <span class="nv-chip">Sociedad</span>
+          <span class="nv-chip">Educación</span>
+          <span class="nv-chip">Otros</span>
+        </div>
+
+        <div class="nv-guide-note fs-s3 italic mt-4">
+          Tema dominante por post.
+        </div>
+      </div>
+
+      <!-- ACTORES -->
+      <div class="nv-card nv-guide-card br-16 p-6">
+        <div class="nv-guide-titleRow">
+          <div class="nv-guide-ico"><i data-feather="users"></i></div>
+          <h3 class="nv-guide-title fw-900 m-0">Actores</h3>
+        </div>
+
+        <p class="nv-p fw-600 opacity-85 mt-4">
+          Muestra <strong>quién aparece</strong> en la conversación.
+        </p>
+
+        <ul class="nv-guide-list mt-4">
+          <li><strong>Entidades públicas:</strong> instituciones y organizaciones.</li>
+          <li><strong>Personajes públicos:</strong> autoridades y figuras relevantes.</li>
+        </ul>
+
+        <div class="nv-guide-note fs-s3 italic mt-4">
+          Ranking por menciones.
+        </div>
+      </div>
+
+      <!-- SENTIMIENTO -->
+      <div class="nv-card nv-guide-card br-16 p-6">
+        <div class="nv-guide-titleRow">
+          <div class="nv-guide-ico"><i data-feather="activity"></i></div>
+          <h3 class="nv-guide-title fw-900 m-0">Sentimiento</h3>
+        </div>
+
+        <p class="nv-p fw-600 opacity-85 mt-4">
+          Indica el <strong>tono</strong> del contenido.
+        </p>
+
+        <div class="nv-sentGrid mt-4">
+          <div class="nv-sent">
+            <span class="nv-dotSent pos"></span> Positivo
+          </div>
+          <div class="nv-sent">
+            <span class="nv-dotSent neg"></span> Negativo
+          </div>
+          <div class="nv-sent">
+            <span class="nv-dotSent neu"></span> Neutro
+          </div>
+        </div>
+
+        <div class="nv-guide-note fs-s3 italic mt-4">
+          “Todos” = total agregado.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+  <!-- USE CASES -->
+  <section class="py-l10">
+    <div class="nv-usecases flex flex-column md-flex-row md-w-80pc mx-auto">
+
+      <div class="w-100pc md-w-50pc">
+        <div class="nv-card nv-usecase-card br-16 p-6 m-5 pointer hover-scale-up-1 ease-300">
+          <div class="nv-usecase-head">
+            <div class="nv-tag inline-block br-8 px-4 py-2 fs-s4 uppercase">para equipos</div>
+            <div class="nv-usecase-title fw-900 mt-4">Toma decisiones rápido</div>
+          </div>
+
+          <p class="nv-p fw-600 opacity-85 mt-4">
+            En minutos ves <strong>qué está pasando</strong>, <strong>quienes son los protagonistas</strong> y
+            <strong>si el tono de las publicaciones es positivo o negativo</strong>.
+          </p>
+
+          <ul class="nv-usecase-list list-none mt-4 p-0">
+            <li class="nv-usecase-item">• Resumen claro del día o semana</li>
+            <li class="nv-usecase-item">• Principales cuentas y nombres</li>
+            <li class="nv-usecase-item">• Gráficos simples para reportar</li>
+          </ul>
+
+          <div class="nv-usecase-cta mt-6">
+            <a href="#pricing" class="nv-btn nv-btn-ghost no-underline">Ver planes</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-100pc md-w-50pc">
+        <div class="nv-card nv-usecase-card br-16 p-6 m-5 pointer hover-scale-up-1 ease-300">
+          <div class="nv-usecase-head">
+            <div class="nv-tag inline-block br-8 px-4 py-2 fs-s4 uppercase">para investigación</div>
+            <div class="nv-usecase-title fw-900 mt-4">Entiende los temas a fondo</div>
+          </div>
+
+          <p class="nv-p fw-600 opacity-85 mt-4">
+            Perfecto para campañas, eventos o crisis. Mira cómo cambia la conversación
+            <strong>día por día</strong> y compara temas con facilidad.
+          </p>
+
+          <ul class="nv-usecase-list list-none mt-4 p-0">
+            <li class="nv-usecase-item">• Evolución por fecha</li>
+            <li class="nv-usecase-item">• Comparación por categorías</li>
+            <li class="nv-usecase-item">• Hallazgos listos para informes</li>
+          </ul>
+
+          <div class="nv-usecase-cta mt-6">
+            <a href="#how" class="nv-btn nv-btn-ghost no-underline">Ver flujo</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing" class="nv-section">
+    <div class="p-10 nv-pricing flex flex-wrap">
+
+      <div class="w-100pc md-w-55pc">
+        <div class="p-5">
+          <h2 class="nv-h2 fw-900 mb-4">Planes simples</h2>
+          <p class="nv-p fw-600 opacity-85">
+            Empieza con lo esencial y escala cuando lo requieras. Ideal para monitoreo y reportes claros.
+          </p>
+
+          <h4 class="fw-900 fs-m2 mt-10">Incluye siempre</h4>
+
+          <div class="nv-includes mt-5">
+            <div class="nv-include">
+              <i data-feather="check" class="nv-include-ico"></i>
+              <div>
+                <div class="nv-include-title">Filtros por fechas</div>
+                <div class="nv-include-sub">Elige un rango y analiza ese período.</div>
+              </div>
+            </div>
+
+            <div class="nv-include">
+              <i data-feather="check" class="nv-include-ico"></i>
+              <div>
+                <div class="nv-include-title">Dashboards por tema</div>
+                <div class="nv-include-sub">Política, economía, seguridad, etc.</div>
+              </div>
+            </div>
+
+            <div class="nv-include">
+              <i data-feather="check" class="nv-include-ico"></i>
+              <div>
+                <div class="nv-include-title">Tono y entidades</div>
+                <div class="nv-include-sub">Positivo/negativo + nombres y lugares más repetidos.</div>
+              </div>
+            </div>
+
+            <div class="nv-include">
+              <i data-feather="check" class="nv-include-ico"></i>
+              <div>
+                <div class="nv-include-title">Top cuentas y timeline</div>
+                <div class="nv-include-sub">Quién publica más y cómo cambian las tendencias día por día.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="nv-muted fs-s2 mt-10">
+            * Luego podemos sumar un plan Pro/Enterprise si lo necesitas.
+          </div>
+        </div>
+      </div>
+
+      <div class="w-100pc md-w-45pc">
+        <div class="p-5">
+          <div class="nv-card nv-plan br-16 p-7 overflow-hidden">
+            <div class="nv-plan-top">
+              <div class="nv-plan-badge">PLAN INICIAL</div>
+              <h3 class="nv-plan-name mt-3">Starter</h3>
+
+              <div class="nv-plan-price mt-3">
+                <span class="nv-plan-currency">$</span>
+                <span class="nv-plan-amount">99</span>
+                <span class="nv-plan-period">/ mes</span>
+              </div>
+
+              <p class="nv-p fw-600 opacity-85 mt-4">
+                Para comenzar a monitorear y generar reportes con lo esencial.
+              </p>
+            </div>
+
+            <div class="nv-plan-divider my-6"></div>
+
+            <div class="nv-plan-features">
+              <div class="nv-plan-item"><i data-feather="user" class="nv-plan-ico"></i><span>1 usuario</span></div>
+              <div class="nv-plan-item"><i data-feather="layout" class="nv-plan-ico"></i><span>Acceso a dashboards</span></div>
+              <div class="nv-plan-item"><i data-feather="filter" class="nv-plan-ico"></i><span>Filtros por fechas y cuentas</span></div>
+              <div class="nv-plan-item"><i data-feather="headphones" class="nv-plan-ico"></i><span>Soporte básico</span></div>
+            </div>
+
+            <div class="mt-7">
+              <button class="nv-btn nv-btn-primary w-100pc">Empezar</button>
+              <div class="nv-muted fs-s2 mt-3 text-center">Sin tarjeta / cancelas cuando quieras</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  
+
+  <!-- FOOTER (simplificado y bonito) -->
+  <footer class="nv-footer">
+    <div class="nv-footer-inner">
+
+      <div class="nv-footer-brand">
+        <div class="nv-footer-logoRow">
+          <img src="assets/images/logo.png" class="nv-footer-logo" alt="NetVora" />
+          <div>
+            <div class="nv-footer-name">NetVora</div>
+            <div class="nv-footer-tagline">Monitoreo y análisis de conversación en X</div>
+          </div>
+        </div>
+
+        <p class="nv-footer-desc">
+          Te ayuda a entender qué se está hablando, quién lo impulsa y cómo cambia con el tiempo.
+        </p>
+
+        <div class="nv-footer-social">
+          <a class="nv-social" href="#" aria-label="X / Twitter"><i data-feather="twitter"></i></a>
+          <a class="nv-social" href="#" aria-label="LinkedIn"><i data-feather="linkedin"></i></a>
+          <a class="nv-social" href="#" aria-label="YouTube"><i data-feather="youtube"></i></a>
+          <a class="nv-social" href="#" aria-label="GitHub"><i data-feather="github"></i></a>
+        </div>
+      </div>
+
+      <div class="nv-footer-links">
+        <div class="nv-footer-col">
+          <div class="nv-footer-title">Producto</div>
+          <a href="#features" class="nv-footer-link">Capacidades</a>
+          <a href="#how" class="nv-footer-link">Cómo funciona</a>
+          <a href="#pricing" class="nv-footer-link">Planes</a>
+        </div>
+
+        <div class="nv-footer-col">
+          <div class="nv-footer-title">Ayuda</div>
+          <a href="#login" class="nv-footer-link">Solicitar demo</a>
+          <a href="#" class="nv-footer-link">Contacto</a>
+          <a href="#" class="nv-footer-link">Privacidad</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="nv-footer-bottom">
+      <span>© <span id="nv-year"></span> NetVora</span>
+      <span class="nv-footer-dot">•</span>
+      <span>Hecho en Bolivia</span>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <a class="nv-top fixed top-50pc right-0 p-3 no-underline" href="#home" title="Volver arriba">
+    <i class="w-4" data-feather="arrow-up"></i>
+  </a>
+
+  <!-- JS libs -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+
+  <!-- ✅ JS propio -->
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>
