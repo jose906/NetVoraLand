@@ -446,6 +446,25 @@
   color: var(--accent);
   opacity: 0.85;
 }
+/* Pricing: 2 planes lado a lado */
+.nv-pricing-cards{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  align-items: stretch;
+}
+
+@media (min-width: 900px){
+  .nv-pricing-cards{
+    grid-template-columns: 1fr 1fr; /* ✅ lado a lado */
+    gap: 16px;
+  }
+}
+
+/* Asegura misma altura visual */
+.nv-pricing-cards .nv-plan{
+  height: 100%;
+}
 
 /* Back to top */
 .nv-top{
