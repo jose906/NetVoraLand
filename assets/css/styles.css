@@ -35,9 +35,9 @@
 }
 
 .nv-logo{
-  height: 100px;       /* ⬅️ sube/baja acá */
+  height: 100px;
   width: auto;
-  max-height: none;   /* anula el max-h-l2 */
+  max-height: none;
   border-radius: 12px;
   object-fit: contain;
   display: block;
@@ -247,35 +247,87 @@
 }
 .nv-feature-card.m-5{ margin: 14px !important; }
 
-/* Slider */
+/* =========================================================
+   ✅ SLIDER (SLICK) — FIX COMPLETO PARA QUE SE VEAN LAS IMÁGENES
+   ========================================================= */
 .nv-slider-wrap{
+  position: relative;
   background: var(--accent-softer);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
-  padding: 10px 0;
+  padding: 16px 0;
 }
 
+/* Importante: slick mete wrappers, esto evita cortes raros */
+.nv-slider-wrap .slick-list{
+  overflow: hidden;
+}
+.nv-slider-wrap .slick-track{
+  display: flex !important;
+  align-items: stretch;
+}
+
+/* cada slide */
+.nv-slide{
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  padding: 28px 12px;
+  outline: none;
+}
+
+/* ✅ imagen visible, centrada y responsive */
 .nv-slide-img{
-  width: min(980px, 92vw);
-  height: 360px;
-  object-fit: cover;
+  width: min(900px, 92vw);
+  max-width: 900px;
+  height: auto;
+  display: block;
+  margin: 0 auto 14px;
+
   border-radius: 18px;
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
 }
-@media (min-width: 900px){
-  .nv-slide-img{ height: 420px; }
+
+/* (Opcional) si tus car1/car2/car3 son “mockups” con fondo transparente */
+.nv-slide-img{
+  object-fit: contain;
+  background: rgba(255,255,255,0.55);
 }
 
-.nv-slider-arrows{ pointer-events: none; }
+/* Dots */
+.nv-slider-wrap .slick-dots{
+  position: static;
+  margin: 10px 0 0;
+  padding: 0;
+}
+.nv-slider-wrap .slick-dots li button:before{ opacity: 0.25; }
+.nv-slider-wrap .slick-dots li.slick-active button:before{ opacity: 0.55; }
+
+/* Flechas overlay */
+.nv-slider-arrows{
+  pointer-events: none;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
 .nv-arrow{
   pointer-events: all;
   border: 1px solid var(--border);
   color: var(--text);
-  background: rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.70);
+  backdrop-filter: blur(6px);
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
 }
-.nv-slider-wrap .slick-dots li button:before{ opacity: 0.25; }
-.nv-slider-wrap .slick-dots li.slick-active button:before{ opacity: 0.55; }
+.nv-arrow:hover{
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+  background: rgba(255,255,255,0.90);
+}
 
 /* Underline big text */
 .nv-underline{ border-bottom: 4px solid rgba(109,40,217,0.25); }
@@ -446,6 +498,7 @@
   color: var(--accent);
   opacity: 0.85;
 }
+
 /* Pricing: 2 planes lado a lado */
 .nv-pricing-cards{
   display: grid;
@@ -453,15 +506,12 @@
   gap: 16px;
   align-items: stretch;
 }
-
 @media (min-width: 900px){
   .nv-pricing-cards{
-    grid-template-columns: 1fr 1fr; /* ✅ lado a lado */
+    grid-template-columns: 1fr 1fr;
     gap: 16px;
   }
 }
-
-/* Asegura misma altura visual */
 .nv-pricing-cards .nv-plan{
   height: 100%;
 }
@@ -591,8 +641,9 @@
   font-size: 0.95rem;
 }
 .nv-footer-dot{ opacity: 0.5; }
+
 /* =========================
-   GUIDE: categorías / entidades / sentimiento
+   GUIDE: categorías / actores / sentimiento
    ========================= */
 .nv-guide{
   background:
@@ -601,8 +652,6 @@
     var(--bg);
   border-top: 1px solid var(--border);
 }
-
-.nv-guide-head{ margin-bottom: 18px; }
 
 .nv-guide-grid{
   display: grid;
@@ -616,7 +665,6 @@
     grid-template-columns: 1.05fr 0.95fr;
     gap: 18px;
   }
-  /* sentimiento ocupa ancho completo abajo */
   .nv-guide-grid .nv-guide-card:nth-child(3){
     grid-column: 1 / -1;
   }
@@ -654,7 +702,6 @@
   letter-spacing: -0.01em;
   color: var(--text);
 }
-.nv-guide-sub{ margin-top: 2px; }
 
 .nv-guide-chips{
   display: flex;
@@ -676,64 +723,17 @@
   white-space: nowrap;
 }
 
-.nv-guide-miniItem{
-  display: flex;
-  gap: 10px;
-  align-items: flex-start;
-  margin: 10px 0;
+.nv-guide-list{
+  margin: 0;
+  padding-left: 18px;
   color: rgba(71, 85, 105, 0.92);
   font-weight: 800;
   line-height: 1.55;
-}
-.nv-bullet{
-  width: 8px;
-  height: 8px;
-  border-radius: 999px;
-  background: var(--accent);
-  opacity: 0.35;
-  margin-top: 7px;
-  flex: 0 0 auto;
 }
 
 .nv-guide-note{
   padding-top: 12px;
   border-top: 1px dashed rgba(15, 23, 42, 0.12);
-}
-
-.nv-guide-split{
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 12px;
-}
-@media (min-width: 900px){
-  .nv-guide-split{
-    grid-template-columns: 1fr;
-  }
-}
-
-.nv-guide-box{
-  border: 1px solid rgba(15, 23, 42, 0.10);
-  background: rgba(246, 247, 251, 0.65);
-  border-radius: 14px;
-  padding: 14px 14px;
-}
-
-.nv-guide-boxTitle{
-  font-weight: 1000;
-  color: var(--text);
-  margin-bottom: 6px;
-}
-
-.nv-pill2{
-  display: inline-flex;
-  padding: 6px 10px;
-  border-radius: 999px;
-  border: 1px solid rgba(109, 40, 217, 0.14);
-  background: rgba(109, 40, 217, 0.06);
-  color: var(--accent);
-  font-weight: 1000;
-  font-size: 0.78rem;
-  letter-spacing: 0.06em;
 }
 
 .nv-sentGrid{
@@ -754,13 +754,6 @@
   padding: 14px 14px;
 }
 
-.nv-sentTop{
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 8px;
-}
-
 .nv-dotSent{
   width: 10px;
   height: 10px;
@@ -771,9 +764,3 @@
 .nv-dotSent.pos{ opacity: 0.35; }
 .nv-dotSent.neg{ opacity: 0.55; }
 .nv-dotSent.neu{ opacity: 0.25; }
-
-.nv-sentTitle{
-  font-weight: 1000;
-  color: var(--text);
-  letter-spacing: -0.01em;
-}

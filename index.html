@@ -13,6 +13,9 @@
   
   <link rel="stylesheet" type="text/css"
     href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
 
   <meta name="description"
     content="NetVora: monitoreo en tiempo real, clasificación por temas, análisis de sentimiento y dashboards para X." />
@@ -142,48 +145,74 @@
   </section>
 
   <!-- SLIDER (con imágenes, sin botones internos, flechas se quedan) -->
-  <section class="relative nv-slider-wrap">
-    <div id="slider-1" class="nv-slider">
+ <section class="relative nv-slider-wrap">
+  <div id="slider-1" class="nv-slider">
 
-      <div class="p-10 md-p-l10 flex justify-center items-center flex-column text-center">
-        
-        <h2 class="nv-h2 fw-900 mt-6">Detecta cuándo un tema se vuelve importante</h2>
-        <p class="nv-p fw-600 opacity-80 my-4 md-w-60pc">
-          NetVora te muestra en qué momento un tema empieza a crecer y cuándo alcanza su punto más alto.
-        </p>
-      </div>
+    <!-- SLIDE 1 -->
+    <div class="p-10 md-p-l10 flex justify-center items-center flex-column text-center nv-slide">
+      <img
+        src="assets/images/car1.png"
+        alt="Crecimiento de temas"
+        class="nv-slide-img"
+      />
 
-      <div class="p-10 md-p-l10 flex justify-center items-center flex-column text-center">
-        
-        <h2 class="nv-h2 fw-900 mt-6">Entiende un tema sin leer miles de publicaciones</h2>
-        <p class="nv-p fw-600 opacity-80 my-4 md-w-60pc">
-          En una sola vista ves cantidad, tono (positivo/negativo) y los nombres que aparecen más.
-        </p>
-      </div>
-
-      <div class="p-10 md-p-l10 flex justify-center items-center flex-column text-center">
-       
-        <h2 class="nv-h2 fw-900 mt-6">Filtra por fechas y cuentas</h2>
-        <p class="nv-p fw-600 opacity-80 my-4 md-w-60pc">
-          Seleccionas fechas y cuentas (medios/personas/entidades) y NetVora recalcula todo automáticamente.
-        </p>
-      </div>
-
+      <h2 class="nv-h2 fw-900 mt-6">
+        Detecta cuándo un tema se vuelve importante
+      </h2>
+      <p class="nv-p fw-600 opacity-80 my-4 md-w-60pc">
+        NetVora te muestra en qué momento un tema empieza a crecer y cuándo alcanza su punto más alto.
+      </p>
     </div>
 
-    <ul class="absolute list-none w-100pc flex justify-between top-50pc nv-slider-arrows">
-      <li>
-        <button class="prev nv-arrow ml-10 br-round bg-transparent flex justify-center items-center p-2 outline-none">
-          <i data-feather="chevron-left"></i>
-        </button>
-      </li>
-      <li>
-        <button class="next nv-arrow mr-10 br-round bg-transparent flex justify-center items-center p-2 outline-none">
-          <i data-feather="chevron-right"></i>
-        </button>
-      </li>
-    </ul>
-  </section>
+    <!-- SLIDE 2 -->
+    <div class="p-10 md-p-l10 flex justify-center items-center flex-column text-center nv-slide">
+      <img
+        src="assets/images/car2.png"
+        alt="Resumen de conversación"
+        class="nv-slide-img"
+      />
+
+      <h2 class="nv-h2 fw-900 mt-6">
+        Entiende un tema sin leer miles de publicaciones
+      </h2>
+      <p class="nv-p fw-600 opacity-80 my-4 md-w-60pc">
+        En una sola vista ves cantidad, tono (positivo/negativo) y los nombres que aparecen más.
+      </p>
+    </div>
+
+    <!-- SLIDE 3 -->
+    <div class="p-10 md-p-l10 flex justify-center items-center flex-column text-center nv-slide">
+      <img
+        src="assets/images/car3.png"
+        alt="Filtros avanzados"
+        class="nv-slide-img"
+      />
+
+      <h2 class="nv-h2 fw-900 mt-6">
+        Filtra por fechas y cuentas
+      </h2>
+      <p class="nv-p fw-600 opacity-80 my-4 md-w-60pc">
+        Seleccionas fechas y cuentas (medios/personas/entidades) y NetVora recalcula todo automáticamente.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- Flechas -->
+  <ul class="absolute list-none w-100pc flex justify-between top-50pc nv-slider-arrows">
+    <li>
+      <button class="prev nv-arrow ml-10 br-round bg-transparent flex justify-center items-center p-2 outline-none">
+        <i data-feather="chevron-left"></i>
+      </button>
+    </li>
+    <li>
+      <button class="next nv-arrow mr-10 br-round bg-transparent flex justify-center items-center p-2 outline-none">
+        <i data-feather="chevron-right"></i>
+      </button>
+    </li>
+  </ul>
+</section>
+
 
   <!-- BIG TEXT -->
   <section class="p-10 md-py-10">
