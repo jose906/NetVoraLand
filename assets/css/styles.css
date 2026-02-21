@@ -33,6 +33,25 @@
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
 }
+/* Replies card layout */
+.nv-replies-grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.nv-replies-box{
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 14px;
+  padding: 14px;
+  background: rgba(255,255,255,.03);
+}
+
+@media (min-width: 768px){
+  .nv-replies-grid{
+    grid-template-columns: 1fr 1fr;
+  }
+}
 
 .nv-logo{
   height: 100px;
