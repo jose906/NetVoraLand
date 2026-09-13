@@ -3,682 +3,1690 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#6d28d9" />
 
   <title>NetVora — Entiende qué está pasando en la conversación digital</title>
   <meta
     name="description"
-    content="NetVora reúne publicaciones, descubre los temas que están creciendo y te muestra de forma clara quién participa, qué se dice y cómo cambia la conversación."
+    content="NetVora transforma miles de publicaciones en una vista clara de los temas que crecen, quiénes participan, qué sentimiento generan y cómo cambia la conversación."
   />
 
-  <!-- Librerías que ya usa tu página -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shorthandcss@1.1.1/dist/shorthand.min.css" />
+  <meta property="og:title" content="NetVora — Entiende la conversación digital" />
+  <meta
+    property="og:description"
+    content="Detecta tendencias, protagonistas, sentimiento y evolución de la conversación digital desde una sola plataforma."
+  />
+  <meta property="og:type" content="website" />
+
+  <!-- Tipografía -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
     rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Muli:200,300,400,500,600,700,800,900&display=swap"
   />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 
-  <!-- CSS propio -->
+  <!-- Iconos -->
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 
-<body class="muli nv-body">
+<body class="nv-body">
 
-  <!-- NAV -->
-  <nav class="nv-nav">
+  <!-- =========================================================
+       NAV
+  ========================================================== -->
+  <header class="nv-nav" id="top">
     <div class="nv-container nv-nav-inner">
-      <a href="#home" class="nv-brand" aria-label="Ir al inicio">
-        <img class="nv-logo" src="assets/images/logo2.png" alt="NetVora" />
+
+      <a href="#home" class="nv-brand" aria-label="NetVora - Inicio">
+        <img
+          src="assets/images/logo2.png"
+          alt="NetVora"
+          class="nv-logo"
+        />
       </a>
 
-      <a
-        data-toggle="toggle-nav"
-        data-target="#nav-items"
-        href="#"
-        class="nv-nav-burger md-hidden"
-        aria-label="Abrir menú"
-      >
-        <i data-feather="menu"></i>
-      </a>
+      <nav class="nv-nav-links" id="nvNavLinks" aria-label="Navegación principal">
+        <a href="#producto" class="nv-nav-link">Producto</a>
+        <a href="#radar" class="nv-nav-link">Radar NetVora</a>
+        <a href="#pro" class="nv-nav-link">NetVora Pro</a>
+        <a href="#pricing" class="nv-nav-link">Planes</a>
+        <a href="#faq" class="nv-nav-link">Preguntas</a>
+      </nav>
 
-      <div id="nav-items" class="nv-nav-items hidden md-flex">
-        <a href="#home" class="nv-link">Inicio</a>
-        <a href="#features" class="nv-link">Qué puedes ver</a>
-        <a href="#how" class="nv-link">Cómo funciona</a>
-        <a href="#pricing" class="nv-link">Planes</a>
-        <a href="https://app.netvora.org" class="nv-btn nv-btn-primary no-underline">Ingresar</a>
+      <div class="nv-nav-actions">
+        <a href="https://app.netvora.org" class="nv-login">Ingresar</a>
+        <a href="https://app.netvora.org" class="nv-btn nv-btn-primary nv-nav-cta">
+          Probar gratis
+          <i data-feather="arrow-up-right"></i>
+        </a>
+
+        <button
+          class="nv-mobile-menu"
+          id="nvMobileMenu"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+          aria-controls="nvNavLinks"
+          type="button"
+        >
+          <i data-feather="menu"></i>
+        </button>
       </div>
+
     </div>
-  </nav>
+  </header>
 
-  <!-- HERO -->
-  <section id="home" class="nv-hero">
-    <div class="nv-container nv-hero-grid">
 
-      <div class="nv-hero-copy">
-        <div class="nv-eyebrow">
-          <span class="nv-eyebrow-dot"></span>
-          Entiende la conversación sin leer miles de publicaciones
+  <main>
+
+    <!-- =========================================================
+         HERO
+    ========================================================== -->
+    <section class="nv-hero" id="home">
+
+      <div class="nv-hero-orb nv-hero-orb-a"></div>
+      <div class="nv-hero-orb nv-hero-orb-b"></div>
+
+      <div class="nv-container nv-hero-grid">
+
+        <div class="nv-hero-copy nv-reveal">
+
+          <div class="nv-eyebrow">
+            <span class="nv-eyebrow-dot"></span>
+            INTELIGENCIA SOBRE LA CONVERSACIÓN DIGITAL
+          </div>
+
+          <h1 class="nv-hero-title">
+            Miles de publicaciones.
+            <span>Una sola vista para entender qué está pasando.</span>
+          </h1>
+
+          <p class="nv-hero-subtitle">
+            NetVora encuentra automáticamente los temas que están creciendo,
+            quiénes protagonizan la conversación, qué sentimiento generan
+            y cómo cambian con el tiempo.
+          </p>
+
+          <div class="nv-hero-actions">
+            <a href="https://app.netvora.org" class="nv-btn nv-btn-primary nv-btn-xl">
+              Probar NetVora gratis
+              <i data-feather="arrow-right"></i>
+            </a>
+
+            <a href="#producto" class="nv-btn nv-btn-secondary nv-btn-xl">
+              <i data-feather="play-circle"></i>
+              Ver cómo funciona
+            </a>
+          </div>
+
+          <div class="nv-hero-proof">
+            <span><i data-feather="check-circle"></i> 7 días gratis</span>
+            <span><i data-feather="check-circle"></i> Sin tarjeta</span>
+            <span><i data-feather="check-circle"></i> Configuración simple</span>
+          </div>
+
         </div>
 
-        <h1 class="nv-h1">
-          Descubre <span class="nv-text-accent">qué está pasando</span>,
-          quién lo impulsa y cómo cambia.
-        </h1>
 
-        <p class="nv-sub">
-          NetVora reúne la conversación de las cuentas que te interesan y la convierte en
-          información fácil de entender. Ves los temas que crecen, las personas y organizaciones
-          más mencionadas, el tono de la conversación y su evolución en el tiempo.
-        </p>
+        <!-- HERO PRODUCT MOCKUP -->
+        <div class="nv-hero-product nv-reveal">
 
-        <div class="nv-hero-actions">
-          <a href="#pricing" class="nv-btn nv-btn-primary nv-btn-lg no-underline">
-            Probar gratis 7 días
+          <div class="nv-product-glow"></div>
+
+          <div class="nv-browser-card">
+            <div class="nv-browser-top">
+              <div class="nv-browser-dots">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="nv-browser-url">app.netvora.org</div>
+              <div class="nv-browser-mini">
+                <i data-feather="more-horizontal"></i>
+              </div>
+            </div>
+
+            <div class="nv-dashboard-demo">
+
+              <div class="nv-demo-topbar">
+                <div>
+                  <span class="nv-demo-label">PANEL DE RESUMEN</span>
+                  <h3>Conversación de hoy</h3>
+                </div>
+                <div class="nv-live-pill">
+                  <span></span>
+                  Actualizando
+                </div>
+              </div>
+
+              <div class="nv-demo-kpis">
+                <div class="nv-demo-kpi">
+                  <span>Publicaciones</span>
+                  <strong>2.847</strong>
+                  <small class="up">+12,4%</small>
+                </div>
+
+                <div class="nv-demo-kpi">
+                  <span>Temas activos</span>
+                  <strong>18</strong>
+                  <small>hoy</small>
+                </div>
+
+                <div class="nv-demo-kpi">
+                  <span>Sentimiento</span>
+                  <strong>Mixto</strong>
+                  <small>48% neutral</small>
+                </div>
+              </div>
+
+              <div class="nv-demo-layout">
+
+                <div class="nv-demo-chart-card">
+                  <div class="nv-demo-card-head">
+                    <div>
+                      <span>Evolución</span>
+                      <strong>Publicaciones por día</strong>
+                    </div>
+                    <span class="nv-demo-chip">7 días</span>
+                  </div>
+
+                  <div class="nv-mini-chart" aria-hidden="true">
+                    <div class="nv-grid-line l1"></div>
+                    <div class="nv-grid-line l2"></div>
+                    <div class="nv-grid-line l3"></div>
+
+                    <svg viewBox="0 0 600 180" preserveAspectRatio="none">
+                      <defs>
+                        <linearGradient id="areaGradient" x1="0" y1="0" x2="0" y2="1">
+                          <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.25"/>
+                          <stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/>
+                        </linearGradient>
+                      </defs>
+
+                      <path
+                        d="M0,142 C55,138 70,118 120,124 C170,130 185,78 238,86 C288,95 310,52 360,65 C418,80 430,42 486,50 C535,57 556,30 600,24 L600,180 L0,180 Z"
+                        fill="url(#areaGradient)"
+                      ></path>
+
+                      <path
+                        d="M0,142 C55,138 70,118 120,124 C170,130 185,78 238,86 C288,95 310,52 360,65 C418,80 430,42 486,50 C535,57 556,30 600,24"
+                        fill="none"
+                        stroke="#7c3aed"
+                        stroke-width="4"
+                        stroke-linecap="round"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+
+                <div class="nv-demo-side">
+                  <div class="nv-demo-side-card">
+                    <span class="nv-demo-card-title">Top entidades</span>
+                    <div class="nv-demo-entity">
+                      <span class="rank">1</span>
+                      <div><strong>BCB</strong><small>Organización</small></div>
+                    </div>
+                    <div class="nv-demo-entity">
+                      <span class="rank">2</span>
+                      <div><strong>La Paz</strong><small>Lugar</small></div>
+                    </div>
+                    <div class="nv-demo-entity">
+                      <span class="rank">3</span>
+                      <div><strong>Bolivia</strong><small>Lugar</small></div>
+                    </div>
+                  </div>
+
+                  <div class="nv-demo-side-card nv-sentiment-mini">
+                    <span class="nv-demo-card-title">Sentimiento</span>
+                    <div class="nv-sent-bars">
+                      <div><span>Positivo</span><b style="--w: 26%"></b><strong>26%</strong></div>
+                      <div><span>Neutral</span><b style="--w: 48%"></b><strong>48%</strong></div>
+                      <div><span>Negativo</span><b style="--w: 26%"></b><strong>26%</strong></div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+
+          <div class="nv-float-card nv-float-topic">
+            <div class="nv-float-icon violet">
+              <i data-feather="trending-up"></i>
+            </div>
+            <div>
+              <span class="nv-float-label">TEMA EN CRECIMIENTO</span>
+              <strong>Cotización del dólar</strong>
+              <small>+34% vs. ayer</small>
+            </div>
+          </div>
+
+          <div class="nv-float-card nv-float-new">
+            <span class="nv-pulse-dot"></span>
+            <div>
+              <span class="nv-float-label">NUEVO</span>
+              <strong>Tendencia detectada</strong>
+            </div>
+          </div>
+
+          <div class="nv-float-card nv-float-sent">
+            <div class="nv-float-icon green">
+              <i data-feather="activity"></i>
+            </div>
+            <div>
+              <span class="nv-float-label">SENTIMIENTO</span>
+              <strong>48% neutral</strong>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         TRANSFORMACIÓN
+    ========================================================== -->
+    <section class="nv-transform">
+      <div class="nv-container">
+
+        <div class="nv-section-heading nv-center nv-reveal">
+          <span class="nv-kicker">MENOS RUIDO. MÁS CLARIDAD.</span>
+          <h2>No necesitas leer todo para saber qué está pasando.</h2>
+          <p>
+            Mientras la conversación crece cada minuto, NetVora organiza
+            automáticamente la información y te muestra solamente lo que merece tu atención.
+          </p>
+        </div>
+
+        <div class="nv-transform-flow nv-reveal">
+
+          <div class="nv-flow-box">
+            <span>CONVERSACIÓN</span>
+            <strong>2.847</strong>
+            <small>publicaciones</small>
+
+            <div class="nv-flow-lines">
+              <i></i><i></i><i></i><i></i><i></i>
+            </div>
+          </div>
+
+          <div class="nv-flow-arrow">
+            <i data-feather="arrow-right"></i>
+          </div>
+
+          <div class="nv-flow-core">
+            <div class="nv-flow-logo">
+              <i data-feather="zap"></i>
+            </div>
+            <strong>NetVora</strong>
+            <span>organiza y entiende</span>
+          </div>
+
+          <div class="nv-flow-arrow">
+            <i data-feather="arrow-right"></i>
+          </div>
+
+          <div class="nv-flow-box nv-flow-result">
+            <span>LO IMPORTANTE</span>
+            <strong>18</strong>
+            <small>temas claros</small>
+
+            <div class="nv-flow-tags">
+              <b>Economía</b>
+              <b>Política</b>
+              <b>Sociedad</b>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         RADAR
+    ========================================================== -->
+    <section class="nv-section nv-section-soft" id="radar">
+      <div class="nv-container">
+
+        <div class="nv-radar-grid">
+
+          <div class="nv-radar-copy nv-reveal">
+
+            <span class="nv-kicker">RADAR NETVORA</span>
+
+            <h2>
+              Detecta lo que está empezando a importar.
+            </h2>
+
+            <p>
+              NetVora agrupa publicaciones que hablan de lo mismo y convierte
+              ese movimiento en temas fáciles de seguir. Así puedes ver qué aparece,
+              qué gana fuerza y qué empieza a desaparecer.
+            </p>
+
+            <div class="nv-radar-status-list">
+
+              <div class="nv-status-item">
+                <span class="nv-status-badge new">NUEVO</span>
+                <div>
+                  <strong>Acaba de aparecer</strong>
+                  <p>Un tema comienza a repetirse en distintas publicaciones.</p>
+                </div>
+              </div>
+
+              <div class="nv-status-item">
+                <span class="nv-status-badge up">↑ SUBE</span>
+                <div>
+                  <strong>Está creciendo</strong>
+                  <p>Recibe más atención que en el período anterior.</p>
+                </div>
+              </div>
+
+              <div class="nv-status-item">
+                <span class="nv-status-badge same">→ IGUAL</span>
+                <div>
+                  <strong>Se mantiene</strong>
+                  <p>La conversación conserva un nivel similar.</p>
+                </div>
+              </div>
+
+              <div class="nv-status-item">
+                <span class="nv-status-badge down">↓ BAJA</span>
+                <div>
+                  <strong>Pierde fuerza</strong>
+                  <p>La cantidad de publicaciones empieza a disminuir.</p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="nv-radar-panel nv-reveal">
+
+            <div class="nv-panel-header">
+              <div>
+                <span class="nv-panel-overline">TÓPICOS DEL DÍA</span>
+                <h3>Lo que está moviendo la conversación</h3>
+              </div>
+
+              <div class="nv-panel-control">
+                Hoy
+                <i data-feather="chevron-down"></i>
+              </div>
+            </div>
+
+            <div class="nv-topic-list">
+
+              <article class="nv-topic-card nv-topic-featured">
+                <div class="nv-topic-main">
+                  <span class="nv-status-badge up">↑ SUBE</span>
+                  <div>
+                    <h4>Cotización del dólar en el mercado paralelo</h4>
+                    <p>BCB · Tipo de cambio · Economía</p>
+                  </div>
+                </div>
+
+                <div class="nv-topic-meta">
+                  <div>
+                    <span>Publicaciones</span>
+                    <strong>428</strong>
+                  </div>
+                  <div>
+                    <span>Cambio</span>
+                    <strong class="positive">+34%</strong>
+                  </div>
+                </div>
+              </article>
+
+              <article class="nv-topic-card">
+                <div class="nv-topic-main">
+                  <span class="nv-status-badge new">NUEVO</span>
+                  <div>
+                    <h4>Nuevas medidas económicas anunciadas</h4>
+                    <p>Gobierno · Economía · Bolivia</p>
+                  </div>
+                </div>
+
+                <div class="nv-topic-meta">
+                  <div>
+                    <span>Publicaciones</span>
+                    <strong>287</strong>
+                  </div>
+                  <div>
+                    <span>Cambio</span>
+                    <strong class="positive">Nuevo</strong>
+                  </div>
+                </div>
+              </article>
+
+              <article class="nv-topic-card">
+                <div class="nv-topic-main">
+                  <span class="nv-status-badge same">→ IGUAL</span>
+                  <div>
+                    <h4>Debate sobre transporte y movilidad urbana</h4>
+                    <p>La Paz · Sociedad · Transporte</p>
+                  </div>
+                </div>
+
+                <div class="nv-topic-meta">
+                  <div>
+                    <span>Publicaciones</span>
+                    <strong>214</strong>
+                  </div>
+                  <div>
+                    <span>Cambio</span>
+                    <strong>+1%</strong>
+                  </div>
+                </div>
+              </article>
+
+              <article class="nv-topic-card">
+                <div class="nv-topic-main">
+                  <span class="nv-status-badge down">↓ BAJA</span>
+                  <div>
+                    <h4>Resultados de la jornada deportiva</h4>
+                    <p>Deportes · Clubes · Resultados</p>
+                  </div>
+                </div>
+
+                <div class="nv-topic-meta">
+                  <div>
+                    <span>Publicaciones</span>
+                    <strong>176</strong>
+                  </div>
+                  <div>
+                    <span>Cambio</span>
+                    <strong class="negative">-18%</strong>
+                  </div>
+                </div>
+              </article>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         PRODUCT STORY
+    ========================================================== -->
+    <section class="nv-section" id="producto">
+      <div class="nv-container">
+
+        <div class="nv-section-heading nv-center nv-reveal">
+          <span class="nv-kicker">NETVORA EN ACCIÓN</span>
+          <h2>De la conversación a respuestas claras.</h2>
+          <p>
+            Cada vista responde una pregunta concreta para que puedas entender
+            rápidamente qué está pasando y qué cambió.
+          </p>
+        </div>
+
+
+        <!-- STORY 1 -->
+        <div class="nv-story nv-story-a nv-reveal">
+
+          <div class="nv-story-media">
+            <div class="nv-shot-shell">
+              <img
+                src="assets/images/car1.png"
+                alt="Vista de tendencias de NetVora"
+                class="nv-product-shot"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          <div class="nv-story-copy">
+            <span class="nv-story-number">01</span>
+            <span class="nv-kicker">QUÉ ESTÁ PASANDO</span>
+            <h3>Los temas importantes aparecen solos.</h3>
+            <p>
+              NetVora encuentra publicaciones relacionadas y las convierte
+              en conversaciones que puedes seguir sin revisar mensaje por mensaje.
+            </p>
+
+            <ul class="nv-check-list">
+              <li><i data-feather="check"></i> Temas nuevos y emergentes</li>
+              <li><i data-feather="check"></i> Temas que suben o bajan</li>
+              <li><i data-feather="check"></i> Comparación diaria y semanal</li>
+              <li><i data-feather="check"></i> Publicaciones dentro de cada tema</li>
+            </ul>
+          </div>
+
+        </div>
+
+
+        <!-- STORY 2 -->
+        <div class="nv-story nv-story-reverse nv-reveal">
+
+          <div class="nv-story-media">
+            <div class="nv-entities-demo">
+
+              <div class="nv-demo-title-row">
+                <div>
+                  <span>PROTAGONISTAS</span>
+                  <h4>Quién aparece más</h4>
+                </div>
+                <span class="nv-demo-chip">Hoy</span>
+              </div>
+
+              <div class="nv-entity-tabs">
+                <button class="active" type="button">Personas</button>
+                <button type="button">Organizaciones</button>
+                <button type="button">Lugares</button>
+              </div>
+
+              <div class="nv-entity-list">
+
+                <div class="nv-entity-row">
+                  <div class="nv-entity-avatar">01</div>
+                  <div class="nv-entity-info">
+                    <strong>Persona destacada</strong>
+                    <span>214 menciones</span>
+                  </div>
+                  <div class="nv-entity-bar"><span style="width: 88%"></span></div>
+                </div>
+
+                <div class="nv-entity-row">
+                  <div class="nv-entity-avatar">02</div>
+                  <div class="nv-entity-info">
+                    <strong>Segunda persona</strong>
+                    <span>181 menciones</span>
+                  </div>
+                  <div class="nv-entity-bar"><span style="width: 72%"></span></div>
+                </div>
+
+                <div class="nv-entity-row">
+                  <div class="nv-entity-avatar">03</div>
+                  <div class="nv-entity-info">
+                    <strong>Tercera persona</strong>
+                    <span>146 menciones</span>
+                  </div>
+                  <div class="nv-entity-bar"><span style="width: 58%"></span></div>
+                </div>
+
+                <div class="nv-entity-row">
+                  <div class="nv-entity-avatar">04</div>
+                  <div class="nv-entity-info">
+                    <strong>Cuarta persona</strong>
+                    <span>103 menciones</span>
+                  </div>
+                  <div class="nv-entity-bar"><span style="width: 41%"></span></div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+          <div class="nv-story-copy">
+            <span class="nv-story-number">02</span>
+            <span class="nv-kicker">QUIÉN ESTÁ DETRÁS</span>
+            <h3>Descubre quién protagoniza la conversación.</h3>
+            <p>
+              Identifica rápidamente los nombres que más aparecen dentro de cada
+              categoría, tema o período.
+            </p>
+
+            <div class="nv-pills">
+              <span><i data-feather="user"></i> Personas</span>
+              <span><i data-feather="briefcase"></i> Organizaciones</span>
+              <span><i data-feather="map-pin"></i> Lugares</span>
+            </div>
+          </div>
+
+        </div>
+
+
+        <!-- STORY 3 -->
+        <div class="nv-story nv-reveal">
+
+          <div class="nv-story-media">
+            <div class="nv-sentiment-demo-large">
+
+              <div class="nv-demo-title-row">
+                <div>
+                  <span>SENTIMIENTO</span>
+                  <h4>Cómo se siente la conversación</h4>
+                </div>
+                <span class="nv-demo-chip">1.284 publicaciones</span>
+              </div>
+
+              <div class="nv-sentiment-body">
+
+                <div class="nv-donut">
+                  <div class="nv-donut-hole">
+                    <span>Principal</span>
+                    <strong>Neutral</strong>
+                    <small>48%</small>
+                  </div>
+                </div>
+
+                <div class="nv-sentiment-legend">
+                  <div>
+                    <span class="dot positive"></span>
+                    <p><strong>26%</strong><small>Positivo</small></p>
+                  </div>
+                  <div>
+                    <span class="dot neutral"></span>
+                    <p><strong>48%</strong><small>Neutral</small></p>
+                  </div>
+                  <div>
+                    <span class="dot negative"></span>
+                    <p><strong>26%</strong><small>Negativo</small></p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="nv-story-copy">
+            <span class="nv-story-number">03</span>
+            <span class="nv-kicker">CÓMO ESTÁ REACCIONANDO</span>
+            <h3>Entiende el tono sin leer publicación por publicación.</h3>
+            <p>
+              Mira de un vistazo si el contenido tiene un tono positivo,
+              neutral o negativo y cómo cambia esa proporción.
+            </p>
+
+            <ul class="nv-check-list">
+              <li><i data-feather="check"></i> Positivo, neutral y negativo</li>
+              <li><i data-feather="check"></i> Vista general y por categoría</li>
+              <li><i data-feather="check"></i> Comparación entre períodos</li>
+            </ul>
+          </div>
+
+        </div>
+
+
+        <!-- STORY 4 -->
+        <div class="nv-story nv-story-reverse nv-reveal">
+
+          <div class="nv-story-media">
+            <div class="nv-shot-shell">
+              <img
+                src="assets/images/car2.png"
+                alt="Vista de evolución de NetVora"
+                class="nv-product-shot"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          <div class="nv-story-copy">
+            <span class="nv-story-number">04</span>
+            <span class="nv-kicker">CÓMO ESTÁ CAMBIANDO</span>
+            <h3>Mira la conversación como una historia, no como una fotografía.</h3>
+            <p>
+              Compara períodos y entiende si una conversación está creciendo,
+              manteniéndose o perdiendo fuerza.
+            </p>
+
+            <div class="nv-comparison-mini">
+              <div>
+                <span>HOY VS. AYER</span>
+                <strong>+18%</strong>
+              </div>
+              <div>
+                <span>SEMANA ACTUAL</span>
+                <strong>+24%</strong>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         DARK DASHBOARD
+    ========================================================== -->
+    <section class="nv-dashboard-section">
+
+      <div class="nv-dashboard-glow"></div>
+
+      <div class="nv-container">
+
+        <div class="nv-dashboard-heading nv-reveal">
+          <span class="nv-kicker nv-kicker-light">TODO EN UNA SOLA VISTA</span>
+
+          <div class="nv-dashboard-heading-grid">
+            <h2>
+              Abre NetVora y entiende qué pasó en pocos minutos.
+            </h2>
+
+            <p>
+              El panel reúne los indicadores más importantes para que puedas empezar
+              por el panorama general y profundizar solamente cuando lo necesites.
+            </p>
+          </div>
+        </div>
+
+        <div class="nv-dashboard-stage nv-reveal">
+
+          <img
+            src="assets/images/car3.png"
+            alt="Panel de NetVora"
+            class="nv-dashboard-image"
+            loading="lazy"
+          />
+
+          <div class="nv-dashboard-tag tag-a">
+            <i data-feather="file-text"></i>
+            Publicaciones de hoy
+          </div>
+
+          <div class="nv-dashboard-tag tag-b">
+            <i data-feather="users"></i>
+            Top personas
+          </div>
+
+          <div class="nv-dashboard-tag tag-c">
+            <i data-feather="briefcase"></i>
+            Organizaciones
+          </div>
+
+          <div class="nv-dashboard-tag tag-d">
+            <i data-feather="map-pin"></i>
+            Lugares
+          </div>
+
+          <div class="nv-dashboard-tag tag-e">
+            <i data-feather="activity"></i>
+            Sentimiento
+          </div>
+
+          <div class="nv-dashboard-tag tag-f">
+            <i data-feather="trending-up"></i>
+            Evolución
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         CATEGORIES
+    ========================================================== -->
+    <section class="nv-section nv-categories">
+      <div class="nv-container">
+
+        <div class="nv-categories-grid">
+
+          <div class="nv-categories-copy nv-reveal">
+            <span class="nv-kicker">VE SOLAMENTE LO QUE TE INTERESA</span>
+            <h2>De la conversación general al tema que necesitas.</h2>
+            <p>
+              NetVora organiza la información por áreas para que puedas entrar
+              directamente al contexto que necesitas analizar.
+            </p>
+
+            <div class="nv-category-cloud">
+              <span class="active">Economía</span>
+              <span>Política</span>
+              <span>Seguridad</span>
+              <span>Sociedad</span>
+              <span>Deportes</span>
+              <span>Salud</span>
+              <span>Educación</span>
+              <span>Medio ambiente</span>
+              <span>Gestiones</span>
+              <span>Otros</span>
+            </div>
+          </div>
+
+
+          <div class="nv-category-card nv-reveal">
+
+            <div class="nv-category-card-top">
+              <div>
+                <span class="nv-category-small">CATEGORÍA</span>
+                <h3>Economía</h3>
+              </div>
+
+              <div class="nv-category-icon">
+                <i data-feather="trending-up"></i>
+              </div>
+            </div>
+
+            <div class="nv-category-search">
+              <i data-feather="search"></i>
+              Buscar dentro de Economía
+            </div>
+
+            <div class="nv-category-content">
+              <span>Dólar</span>
+              <span>BCB</span>
+              <span>Tipo de cambio</span>
+              <span>Empresas</span>
+              <span>Precios</span>
+              <span>Mercados</span>
+            </div>
+
+            <div class="nv-category-stats">
+              <div>
+                <span>Publicaciones</span>
+                <strong>684</strong>
+              </div>
+              <div>
+                <span>Temas</span>
+                <strong>12</strong>
+              </div>
+              <div>
+                <span>Principal tono</span>
+                <strong>Neutral</strong>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         PRO COMMENTS
+    ========================================================== -->
+    <section class="nv-pro-section" id="pro">
+
+      <div class="nv-pro-orb"></div>
+
+      <div class="nv-container nv-pro-grid">
+
+        <div class="nv-pro-copy nv-reveal">
+
+          <div class="nv-pro-badge">
+            <i data-feather="sparkles"></i>
+            NETVORA PRO
+          </div>
+
+          <h2>
+            Las publicaciones cuentan una parte de la historia.
+            <span>Los comentarios cuentan la otra.</span>
+          </h2>
+
+          <p>
+            Con NetVora Pro también puedes entender cómo reacciona la gente
+            en las respuestas: sentimiento, personas mencionadas y organizaciones
+            que aparecen dentro de la conversación.
+          </p>
+
+          <ul class="nv-pro-list">
+            <li><i data-feather="check-circle"></i> Análisis de comentarios y respuestas</li>
+            <li><i data-feather="check-circle"></i> Sentimiento de los comentarios</li>
+            <li><i data-feather="check-circle"></i> Personas mencionadas</li>
+            <li><i data-feather="check-circle"></i> Organizaciones mencionadas</li>
+            <li><i data-feather="check-circle"></i> Selección ampliada de cuentas</li>
+          </ul>
+
+          <a href="#pricing" class="nv-btn nv-btn-light nv-btn-xl">
+            Ver Plan Pro
             <i data-feather="arrow-right"></i>
           </a>
 
-          <a
-            href="mailto:ventas@netvora.org?subject=Solicitud%20de%20demo%20NetVora&body=Hola%2C%20quiero%20conocer%20NetVora."
-            class="nv-btn nv-btn-soft nv-btn-lg no-underline"
-          >
-            Solicitar una demo
-          </a>
         </div>
 
-        <div class="nv-hero-mini">
-          <div class="nv-mini-item"><i data-feather="check-circle"></i><span>Temas que están creciendo</span></div>
-          <div class="nv-mini-item"><i data-feather="check-circle"></i><span>Personas, organizaciones y lugares</span></div>
-          <div class="nv-mini-item"><i data-feather="check-circle"></i><span>Resultados simples y visuales</span></div>
-        </div>
-      </div>
 
-      <div class="nv-hero-media">
-        <div class="nv-hero-glow"></div>
+        <div class="nv-comments-demo nv-reveal">
 
-        <img
-          class="nv-hero-img"
-          src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1400&q=80"
-          alt="Vista de información y gráficos de NetVora"
-          loading="lazy"
-        />
+          <div class="nv-comment-post">
+            <div class="nv-comment-post-head">
+              <div class="nv-comment-avatar">NV</div>
+              <div>
+                <strong>Publicación analizada</strong>
+                <span>Conversación pública</span>
+              </div>
+              <i data-feather="more-horizontal"></i>
+            </div>
 
-        <div class="nv-card-float nv-card-float-main">
-          <div class="nv-float-icon"><i data-feather="trending-up"></i></div>
-          <div>
-            <div class="nv-card-title">Radar de tendencias</div>
-            <div class="nv-card-sub">Encuentra automáticamente los temas que empiezan a llamar la atención.</div>
-          </div>
-        </div>
-
-        <div class="nv-card-float nv-card-float-small">
-          <span class="nv-live-dot"></span>
-          Actualización automática
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- BENEFICIOS -->
-  <section id="features" class="nv-section nv-section-space">
-    <div class="nv-container">
-      <div class="nv-section-head">
-        <div class="nv-kicker">TODO EN UN SOLO LUGAR</div>
-        <h2 class="nv-h2">Lo importante de la conversación, explicado de forma simple</h2>
-        <p class="nv-p">
-          No necesitas revisar publicación por publicación. NetVora organiza la información
-          y te muestra directamente qué merece tu atención.
-        </p>
-      </div>
-
-      <div class="nv-feature-grid">
-
-        <article class="nv-card nv-feature-card">
-          <div class="nv-icon"><i data-feather="radio"></i></div>
-          <h3>Radar de tendencias</h3>
-          <p>
-            Detecta automáticamente los temas nuevos y te muestra cuáles están creciendo,
-            cuáles bajan y cuáles aparecen por primera vez.
-          </p>
-          <div class="nv-feature-bottom">Sabrás qué empieza a llamar la atención antes de que se pierda entre miles de publicaciones.</div>
-        </article>
-
-        <article class="nv-card nv-feature-card">
-          <div class="nv-icon"><i data-feather="users"></i></div>
-          <h3>Quién aparece más</h3>
-          <p>
-            Identifica las personas, organizaciones, instituciones y lugares que más se repiten
-            dentro de cada conversación.
-          </p>
-          <div class="nv-feature-bottom">Entiende rápidamente quiénes son los protagonistas.</div>
-        </article>
-
-        <article class="nv-card nv-feature-card">
-          <div class="nv-icon"><i data-feather="activity"></i></div>
-          <h3>Cómo se siente la conversación</h3>
-          <p>
-            Mira si lo que se publica tiene un tono positivo, negativo o neutral,
-            sin tener que leer cada mensaje.
-          </p>
-          <div class="nv-feature-bottom">Una forma rápida de entender la reacción general.</div>
-        </article>
-
-        <article class="nv-card nv-feature-card">
-          <div class="nv-icon"><i data-feather="bar-chart-2"></i></div>
-          <h3>Cómo cambia con el tiempo</h3>
-          <p>
-            Compara días y semanas para saber cuándo un tema crece, se mantiene
-            o empieza a perder fuerza.
-          </p>
-          <div class="nv-feature-bottom">Ideal para seguir campañas, noticias, eventos o situaciones importantes.</div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- SLIDER -->
-  <section class="nv-slider-wrap">
-    <div class="nv-container">
-      <div id="slider-1" class="nv-slider">
-
-        <div class="nv-slide">
-          <img src="assets/images/car1.png" alt="Crecimiento de un tema" class="nv-slide-img" />
-          <div class="nv-slide-copy">
-            <span class="nv-slide-number">01</span>
-            <h2>Ve cuándo un tema empieza a crecer</h2>
             <p>
-              NetVora te muestra el movimiento de la conversación para que puedas distinguir
-              rápidamente qué tema está ganando atención.
+              El tema continúa generando conversación y nuevas reacciones
+              durante las últimas horas...
             </p>
-          </div>
-        </div>
 
-        <div class="nv-slide">
-          <img src="assets/images/car2.png" alt="Resumen de un tema" class="nv-slide-img" />
-          <div class="nv-slide-copy">
-            <span class="nv-slide-number">02</span>
-            <h2>Entiende un tema en pocos minutos</h2>
-            <p>
-              Revisa cantidad de publicaciones, tono, nombres importantes y evolución
-              desde una sola vista.
-            </p>
-          </div>
-        </div>
-
-        <div class="nv-slide">
-          <img src="assets/images/car3.png" alt="Selección de fechas y cuentas" class="nv-slide-img" />
-          <div class="nv-slide-copy">
-            <span class="nv-slide-number">03</span>
-            <h2>Mira solamente lo que te interesa</h2>
-            <p>
-              Elige fechas y cuentas específicas. NetVora vuelve a organizar la información
-              para mostrarte únicamente ese grupo.
-            </p>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="nv-slider-controls">
-        <button class="prev nv-arrow" aria-label="Anterior"><i data-feather="chevron-left"></i></button>
-        <button class="next nv-arrow" aria-label="Siguiente"><i data-feather="chevron-right"></i></button>
-      </div>
-    </div>
-  </section>
-
-  <!-- FRASE -->
-  <section class="nv-statement">
-    <div class="nv-container">
-      <div class="nv-statement-box">
-        <span class="nv-kicker">MENOS RUIDO. MÁS CLARIDAD.</span>
-        <h2>
-          Pasa de miles de publicaciones a una vista clara de
-          <span class="nv-text-accent">qué importa ahora.</span>
-        </h2>
-      </div>
-    </div>
-  </section>
-
-  <!-- HOW -->
-  <section id="how" class="nv-section nv-section-space nv-how-section">
-    <div class="nv-container">
-      <div class="nv-section-head">
-        <div class="nv-kicker">CÓMO FUNCIONA</div>
-        <h2 class="nv-h2">Tres pasos y NetVora hace el trabajo pesado</h2>
-        <p class="nv-p">
-          Tú eliges qué quieres observar. NetVora organiza la conversación y te presenta
-          los resultados de forma clara.
-        </p>
-      </div>
-
-      <div class="nv-how-grid">
-
-        <article class="nv-how-card">
-          <div class="nv-step">1</div>
-          <div class="nv-how-content">
-            <h3>Elige las cuentas que quieres seguir</h3>
-            <p>
-              Selecciona medios, personas, instituciones u otras cuentas que sean importantes para ti.
-            </p>
-            <div class="nv-simple-list">
-              <span><i data-feather="check"></i> Medios de comunicación</span>
-              <span><i data-feather="check"></i> Personas</span>
-              <span><i data-feather="check"></i> Instituciones y organizaciones</span>
+            <div class="nv-comment-post-meta">
+              <span><i data-feather="message-circle"></i> 824 respuestas</span>
+              <span><i data-feather="repeat"></i> 136</span>
+              <span><i data-feather="heart"></i> 1.208</span>
             </div>
           </div>
-        </article>
 
-        <article class="nv-how-card">
-          <div class="nv-step">2</div>
-          <div class="nv-how-content">
-            <h3>NetVora encuentra lo importante</h3>
-            <p>
-              Detecta los temas que aparecen, quiénes son mencionados y cómo se expresa la conversación.
-            </p>
-            <div class="nv-simple-list">
-              <span><i data-feather="check"></i> Temas nuevos y temas en crecimiento</span>
-              <span><i data-feather="check"></i> Personas, organizaciones y lugares</span>
-              <span><i data-feather="check"></i> Tono positivo, negativo o neutral</span>
-            </div>
-          </div>
-        </article>
 
-        <article class="nv-how-card">
-          <div class="nv-step">3</div>
-          <div class="nv-how-content">
-            <h3>Revisa el resumen y toma decisiones</h3>
-            <p>
-              Todo queda ordenado en gráficos y listas fáciles de revisar para que encuentres respuestas rápido.
-            </p>
-            <div class="nv-simple-list">
-              <span><i data-feather="check"></i> Resumen del día o la semana</span>
-              <span><i data-feather="check"></i> Evolución de cada tema</span>
-              <span><i data-feather="check"></i> Principales cuentas y protagonistas</span>
+          <div class="nv-comments-summary">
+
+            <div class="nv-comments-summary-head">
+              <div>
+                <span>ANÁLISIS DE RESPUESTAS</span>
+                <h4>824 comentarios</h4>
+              </div>
+              <span class="nv-pro-mini-badge">PRO</span>
             </div>
+
+            <div class="nv-comment-sentiment">
+              <div>
+                <span class="positive"></span>
+                <strong>18%</strong>
+                <small>Positivo</small>
+              </div>
+              <div>
+                <span class="neutral"></span>
+                <strong>44%</strong>
+                <small>Neutral</small>
+              </div>
+              <div>
+                <span class="negative"></span>
+                <strong>38%</strong>
+                <small>Negativo</small>
+              </div>
+            </div>
+
+            <div class="nv-comment-insights">
+              <div>
+                <i data-feather="user"></i>
+                <div>
+                  <span>Personas mencionadas</span>
+                  <strong>27 detectadas</strong>
+                </div>
+              </div>
+
+              <div>
+                <i data-feather="briefcase"></i>
+                <div>
+                  <span>Organizaciones</span>
+                  <strong>14 detectadas</strong>
+                </div>
+              </div>
+            </div>
+
           </div>
-        </article>
+
+        </div>
 
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- QUÉ ANALIZA -->
-  <section id="guide" class="nv-section nv-guide nv-section-space">
-    <div class="nv-container">
 
-      <div class="nv-section-head">
-        <div class="nv-kicker">QUÉ TE MUESTRA</div>
-        <h2 class="nv-h2">Una lectura completa de la conversación</h2>
-        <p class="nv-p">
-          NetVora separa la información en partes fáciles de entender para que encuentres
-          rápidamente lo que necesitas.
-        </p>
+    <!-- =========================================================
+         WHO IS IT FOR
+    ========================================================== -->
+    <section class="nv-section">
+      <div class="nv-container">
+
+        <div class="nv-section-heading nv-center nv-reveal">
+          <span class="nv-kicker">PARA EQUIPOS QUE NECESITAN ENTENDER RÁPIDO</span>
+          <h2>NetVora convierte conversación en contexto.</h2>
+          <p>
+            Úsalo cuando necesitas saber qué está ocurriendo sin convertir
+            tu día en horas de búsqueda y lectura.
+          </p>
+        </div>
+
+        <div class="nv-audience-grid">
+
+          <article class="nv-audience-card nv-reveal">
+            <div class="nv-audience-icon">
+              <i data-feather="radio"></i>
+            </div>
+            <span>01</span>
+            <h3>Medios de comunicación</h3>
+            <p>
+              Detecta historias que empiezan a crecer y descubre quién está
+              marcando la conversación.
+            </p>
+          </article>
+
+          <article class="nv-audience-card nv-reveal">
+            <div class="nv-audience-icon">
+              <i data-feather="briefcase"></i>
+            </div>
+            <span>02</span>
+            <h3>Empresas</h3>
+            <p>
+              Entiende qué se está diciendo alrededor de tu industria,
+              entorno y temas de interés.
+            </p>
+          </article>
+
+          <article class="nv-audience-card nv-reveal">
+            <div class="nv-audience-icon">
+              <i data-feather="home"></i>
+            </div>
+            <span>03</span>
+            <h3>Instituciones</h3>
+            <p>
+              Sigue temas relevantes y observa cómo evoluciona la conversación
+              pública a lo largo del tiempo.
+            </p>
+          </article>
+
+          <article class="nv-audience-card nv-reveal">
+            <div class="nv-audience-icon">
+              <i data-feather="bar-chart-2"></i>
+            </div>
+            <span>04</span>
+            <h3>Analistas y comunicación</h3>
+            <p>
+              Convierte miles de publicaciones en información lista para
+              revisar, comparar y reportar.
+            </p>
+          </article>
+
+        </div>
+
       </div>
+    </section>
 
-      <div class="nv-guide-grid">
 
-        <article class="nv-guide-card nv-guide-card-large">
-          <div class="nv-guide-top">
-            <div class="nv-guide-ico"><i data-feather="compass"></i></div>
+    <!-- =========================================================
+         HOW
+    ========================================================== -->
+    <section class="nv-how" id="how">
+      <div class="nv-container">
+
+        <div class="nv-section-heading nv-center nv-reveal">
+          <span class="nv-kicker">CÓMO FUNCIONA</span>
+          <h2>NetVora hace el trabajo pesado.</h2>
+          <p>
+            Tú eliges qué quieres observar. La plataforma organiza el resto.
+          </p>
+        </div>
+
+        <div class="nv-how-grid">
+
+          <article class="nv-how-card nv-reveal">
+            <div class="nv-how-number">01</div>
+            <div class="nv-how-icon">
+              <i data-feather="users"></i>
+            </div>
+            <h3>Elige qué quieres seguir</h3>
+            <p>
+              Selecciona las cuentas, fechas y contenido que son importantes
+              para tu análisis.
+            </p>
+          </article>
+
+          <article class="nv-how-card nv-reveal">
+            <div class="nv-how-number">02</div>
+            <div class="nv-how-icon">
+              <i data-feather="cpu"></i>
+            </div>
+            <h3>NetVora organiza la conversación</h3>
+            <p>
+              Detecta temas, clasifica contenido, encuentra protagonistas
+              y analiza el tono.
+            </p>
+          </article>
+
+          <article class="nv-how-card nv-reveal">
+            <div class="nv-how-number">03</div>
+            <div class="nv-how-icon">
+              <i data-feather="eye"></i>
+            </div>
+            <h3>Revisa lo importante</h3>
+            <p>
+              Entra al panel y encuentra rápidamente qué cambió y qué
+              merece tu atención.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         PRODUCT PROOF / METRICS
+         Reemplaza los números XXX cuando quieras usar datos reales públicos
+    ========================================================== -->
+    <section class="nv-proof-section">
+      <div class="nv-container">
+
+        <div class="nv-proof-box nv-reveal">
+
+          <div class="nv-proof-copy">
+            <span class="nv-kicker">TRABAJA MIENTRAS TÚ HACES OTRAS COSAS</span>
+            <h2>La conversación no se detiene. NetVora tampoco.</h2>
+            <p>
+              La plataforma reúne y organiza información de forma continua
+              para que tu siguiente revisión empiece con contexto, no desde cero.
+            </p>
+          </div>
+
+          <div class="nv-proof-stats">
             <div>
-              <span class="nv-guide-label">DESTACADO</span>
-              <h3>Radar de tendencias</h3>
+              <strong>10</strong>
+              <span>áreas de conversación</span>
             </div>
-          </div>
-          <p>
-            NetVora descubre automáticamente grupos de publicaciones que hablan de lo mismo
-            y los convierte en temas fáciles de seguir.
-          </p>
-
-          <div class="nv-trend-demo">
-            <div class="nv-trend-row">
-              <div>
-                <strong>Nuevo tema detectado</strong>
-                <span>Empieza a aparecer en varias cuentas.</span>
-              </div>
-              <span class="nv-trend-status new">Nuevo</span>
-            </div>
-            <div class="nv-trend-row">
-              <div>
-                <strong>Tema en crecimiento</strong>
-                <span>Está recibiendo más publicaciones que antes.</span>
-              </div>
-              <span class="nv-trend-status up">Sube</span>
-            </div>
-            <div class="nv-trend-row">
-              <div>
-                <strong>Tema perdiendo fuerza</strong>
-                <span>La conversación empieza a bajar.</span>
-              </div>
-              <span class="nv-trend-status down">Baja</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="nv-guide-card">
-          <div class="nv-guide-top">
-            <div class="nv-guide-ico"><i data-feather="grid"></i></div>
-            <h3>Áreas de conversación</h3>
-          </div>
-          <p>Te ayuda a ubicar rápidamente de qué se está hablando.</p>
-          <div class="nv-guide-chips">
-            <span class="nv-chip">Política</span>
-            <span class="nv-chip">Economía</span>
-            <span class="nv-chip">Deportes</span>
-            <span class="nv-chip">Seguridad</span>
-            <span class="nv-chip">Salud</span>
-            <span class="nv-chip">Sociedad</span>
-            <span class="nv-chip">Educación</span>
-          </div>
-        </article>
-
-        <article class="nv-guide-card">
-          <div class="nv-guide-top">
-            <div class="nv-guide-ico"><i data-feather="users"></i></div>
-            <h3>Protagonistas</h3>
-          </div>
-          <p>
-            Muestra las personas, instituciones, organizaciones y lugares que aparecen
-            con mayor frecuencia.
-          </p>
-          <div class="nv-guide-points">
-            <span><i data-feather="user"></i> Personas más mencionadas</span>
-            <span><i data-feather="briefcase"></i> Organizaciones e instituciones</span>
-            <span><i data-feather="map-pin"></i> Lugares relevantes</span>
-          </div>
-        </article>
-
-        <article class="nv-guide-card">
-          <div class="nv-guide-top">
-            <div class="nv-guide-ico"><i data-feather="smile"></i></div>
-            <h3>Tono de la conversación</h3>
-          </div>
-          <p>
-            Resume si el contenido tiene principalmente un tono positivo, negativo o neutral.
-          </p>
-          <div class="nv-sent-grid">
-            <div class="nv-sent"><span class="nv-dot-sent pos"></span> Positivo</div>
-            <div class="nv-sent"><span class="nv-dot-sent neg"></span> Negativo</div>
-            <div class="nv-sent"><span class="nv-dot-sent neu"></span> Neutral</div>
-          </div>
-        </article>
-
-        <article class="nv-guide-card nv-comments-card">
-          <div class="nv-guide-top">
-            <div class="nv-guide-ico"><i data-feather="message-circle"></i></div>
             <div>
-              <span class="nv-guide-label nv-pro-label">PLAN PRO</span>
-              <h3>Qué dice la gente en los comentarios</h3>
+              <strong>3</strong>
+              <span>tipos de entidades</span>
+            </div>
+            <div>
+              <strong>24/7</strong>
+              <span>seguimiento automatizado</span>
             </div>
           </div>
-          <p>
-            Con el plan Pro, NetVora también revisa las respuestas de las publicaciones
-            para mostrarte cómo reacciona la gente y quién aparece dentro de esa conversación.
-          </p>
-          <div class="nv-comments-preview">
-            <span><i data-feather="message-square"></i> Reacción positiva, negativa o neutral</span>
-            <span><i data-feather="users"></i> Personas y organizaciones mencionadas</span>
-          </div>
-        </article>
 
-      </div>
-    </div>
-  </section>
-
-  <!-- CASOS DE USO -->
-  <section class="nv-section nv-section-space">
-    <div class="nv-container">
-      <div class="nv-usecases-grid">
-
-        <article class="nv-usecase-card">
-          <div class="nv-usecase-icon"><i data-feather="zap"></i></div>
-          <span class="nv-kicker">PARA EL DÍA A DÍA</span>
-          <h3>Entiende rápidamente qué está pasando</h3>
-          <p>
-            Revisa en pocos minutos los temas más importantes, quiénes aparecen y cómo
-            está cambiando la conversación.
-          </p>
-          <ul>
-            <li>Resumen del día o la semana</li>
-            <li>Temas que suben, bajan o recién aparecen</li>
-            <li>Principales nombres y cuentas</li>
-          </ul>
-        </article>
-
-        <article class="nv-usecase-card nv-usecase-featured">
-          <div class="nv-usecase-icon"><i data-feather="search"></i></div>
-          <span class="nv-kicker">PARA SEGUIR UN TEMA</span>
-          <h3>Mira cómo evoluciona una conversación</h3>
-          <p>
-            Úsalo para campañas, eventos, noticias importantes o cualquier tema que necesites
-            observar durante varios días.
-          </p>
-          <ul>
-            <li>Comparación entre períodos</li>
-            <li>Evolución de la cantidad de publicaciones</li>
-            <li>Cambios en protagonistas y tono</li>
-          </ul>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- PRICING -->
-  <section id="pricing" class="nv-pricing-section nv-section-space">
-    <div class="nv-container">
-
-      <div class="nv-section-head nv-section-head-center">
-        <div class="nv-kicker">PLANES</div>
-        <h2 class="nv-h2">Empieza gratis y elige cuánto necesitas analizar</h2>
-        <p class="nv-p">
-          Los tres planes son fáciles de entender. La principal diferencia es cuántas cuentas
-          puedes seleccionar y si necesitas analizar también los comentarios.
-        </p>
-      </div>
-
-      <div class="nv-pricing-cards">
-
-        <!-- GRATIS -->
-        <article class="nv-plan nv-plan-free">
-          <div class="nv-plan-top">
-            <span class="nv-plan-badge">PRUEBA GRATIS</span>
-            <h3 class="nv-plan-name">7 días gratis</h3>
-            <div class="nv-plan-price">
-              <span class="nv-plan-currency">$</span>
-              <span class="nv-plan-amount">0</span>
-            </div>
-            <p>
-              Prueba todo lo que incluye el plan Básico durante una semana.
-            </p>
-          </div>
-
-          <div class="nv-plan-divider"></div>
-
-          <div class="nv-plan-features">
-            <div class="nv-plan-item"><i data-feather="check"></i><span>Todo lo incluido en el plan Básico</span></div>
-            <div class="nv-plan-item"><i data-feather="check"></i><span>Radar de tendencias</span></div>
-            <div class="nv-plan-item"><i data-feather="check"></i><span>Temas, protagonistas y tono</span></div>
-            <div class="nv-plan-item"><i data-feather="check"></i><span>Gráficos y evolución en el tiempo</span></div>
-            <div class="nv-plan-item nv-plan-item-off"><i data-feather="x"></i><span>Sin análisis de comentarios</span></div>
-          </div>
-
-          <div class="nv-plan-action">
-            <a href="https://app.netvora.org" class="nv-btn nv-btn-soft nv-btn-block no-underline">
-              Empezar prueba gratis
-            </a>
-            <small>7 días para conocer NetVora</small>
-          </div>
-        </article>
-
-        <!-- BÁSICO -->
-        <article class="nv-plan nv-plan-basic">
-          <div class="nv-plan-top">
-            <span class="nv-plan-badge">PLAN BÁSICO</span>
-            <h3 class="nv-plan-name">Básico</h3>
-            <div class="nv-plan-price">
-              <span class="nv-plan-currency">$</span>
-              <span class="nv-plan-amount">200</span>
-              <span class="nv-plan-period">/ mes</span>
-            </div>
-            <p>
-              Para equipos que quieren seguir un grupo definido de cuentas y entender
-              la conversación principal.
-            </p>
-          </div>
-
-          <div class="nv-plan-divider"></div>
-
-          <div class="nv-plan-features">
-            <div class="nv-plan-item"><i data-feather="check"></i><span>Selección limitada de cuentas</span></div>
-            <div class="nv-plan-item"><i data-feather="check"></i><span>Radar de tendencias</span></div>
-            <div class="nv-plan-item"><i data-feather="check"></i><span>Temas que suben, bajan o aparecen</span></div>
-            <div class="nv-plan-item"><i data-feather="check"></i><span>Personas, organizaciones y lugares</span></div>
-            <div class="nv-plan-item"><i data-feather="check"></i><span>Tono de la conversación</span></div>
-            <div class="nv-plan-item"><i data-feather="check"></i><span>Filtros por fechas y cuentas</span></div>
-            <div class="nv-plan-item"><i data-feather="check"></i><span>Gráficos, resúmenes y comparaciones</span></div>
-            <div class="nv-plan-item nv-plan-item-off"><i data-feather="x"></i><span>No incluye análisis de comentarios</span></div>
-          </div>
-
-          <div class="nv-plan-action">
-            <a
-              href="mailto:ventas@netvora.org?subject=Inter%C3%A9s%20en%20Plan%20B%C3%A1sico%20NetVora&body=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20Plan%20B%C3%A1sico%20de%20NetVora."
-              class="nv-btn nv-btn-primary nv-btn-block no-underline"
-            >
-              Elegir Básico
-            </a>
-            <small>Para monitoreo diario y reportes</small>
-          </div>
-        </article>
-
-        <!-- PRO -->
-        <article class="nv-plan nv-plan-pro">
-          <div class="nv-plan-popular">MÁS COMPLETO</div>
-
-          <div class="nv-plan-top">
-            <span class="nv-plan-badge nv-plan-badge-pro">PLAN PRO</span>
-            <h3 class="nv-plan-name">Pro</h3>
-            <div class="nv-plan-price nv-plan-price-text">
-              <span class="nv-plan-amount nv-plan-amount-text">Consultar</span>
-            </div>
-            <p>
-              Para quienes necesitan observar todas las cuentas que quieran y entender
-              también la reacción del público en los comentarios.
-            </p>
-          </div>
-
-          <div class="nv-plan-divider"></div>
-
-          <div class="nv-plan-features">
-            <div class="nv-plan-item"><i data-feather="check-circle"></i><span><strong>Selección ilimitada de cuentas</strong></span></div>
-            <div class="nv-plan-item"><i data-feather="check-circle"></i><span>Todo lo incluido en el plan Básico</span></div>
-            <div class="nv-plan-item"><i data-feather="check-circle"></i><span>Radar de tendencias</span></div>
-            <div class="nv-plan-item"><i data-feather="check-circle"></i><span>Temas, protagonistas y tono</span></div>
-            <div class="nv-plan-item"><i data-feather="check-circle"></i><span>Filtros y comparaciones</span></div>
-            <div class="nv-plan-item nv-plan-item-highlight"><i data-feather="message-circle"></i><span><strong>Análisis de comentarios</strong></span></div>
-            <div class="nv-plan-item nv-plan-item-highlight"><i data-feather="users"></i><span>Personas y organizaciones mencionadas en comentarios</span></div>
-            <div class="nv-plan-item nv-plan-item-highlight"><i data-feather="activity"></i><span>Tono de los comentarios</span></div>
-          </div>
-
-          <div class="nv-plan-action">
-            <a
-              href="mailto:ventas@netvora.org?subject=Inter%C3%A9s%20en%20Plan%20Pro%20NetVora&body=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20Plan%20Pro%20de%20NetVora."
-              class="nv-btn nv-btn-accent nv-btn-block no-underline"
-            >
-              Hablar sobre Pro
-            </a>
-            <small>Para análisis más amplio y profundo</small>
-          </div>
-        </article>
-
-      </div>
-
-      <div class="nv-pricing-note">
-        <i data-feather="info"></i>
-        <span>
-          La prueba gratuita incluye las funciones del plan Básico. El análisis de comentarios
-          está disponible únicamente en Pro.
-        </span>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA FINAL -->
-  <section class="nv-final-cta">
-    <div class="nv-container">
-      <div class="nv-final-cta-box">
-        <div>
-          <span class="nv-kicker">EMPIEZA SIN COMPLICARTE</span>
-          <h2>Descubre qué está pasando en la conversación que te importa.</h2>
-          <p>Prueba NetVora durante 7 días y mira si te ayuda a encontrar respuestas más rápido.</p>
         </div>
-        <a href="https://app.netvora.org" class="nv-btn nv-btn-primary nv-btn-lg no-underline">
-          Probar gratis 7 días
-          <i data-feather="arrow-right"></i>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         PRICING
+    ========================================================== -->
+    <section class="nv-pricing" id="pricing">
+      <div class="nv-container">
+
+        <div class="nv-section-heading nv-center nv-reveal">
+          <span class="nv-kicker">PLANES</span>
+          <h2>Empieza gratis. Crece cuando necesites más.</h2>
+          <p>
+            Elige el nivel de análisis que necesitas. Sin precios escondidos
+            y con una prueba gratuita para conocer NetVora.
+          </p>
+        </div>
+
+        <div class="nv-pricing-grid">
+
+          <!-- FREE -->
+          <article class="nv-price-card nv-reveal">
+
+            <div class="nv-price-card-head">
+              <span class="nv-plan-label">PRUEBA GRATIS</span>
+              <h3>Gratis</h3>
+
+              <div class="nv-price">
+                <span class="currency">Bs</span>
+                <strong>0</strong>
+                <span class="period">/ 7 días</span>
+              </div>
+
+              <p>
+                Conoce NetVora con las funciones del Plan Básico durante una semana.
+              </p>
+            </div>
+
+            <div class="nv-price-divider"></div>
+
+            <ul class="nv-price-list">
+              <li><i data-feather="check"></i> Radar NetVora</li>
+              <li><i data-feather="check"></i> Temas y tendencias</li>
+              <li><i data-feather="check"></i> Sentimiento</li>
+              <li><i data-feather="check"></i> Personas, organizaciones y lugares</li>
+              <li><i data-feather="check"></i> Categorías</li>
+              <li><i data-feather="check"></i> Dashboard y gráficos</li>
+              <li><i data-feather="check"></i> Filtros y búsqueda</li>
+              <li><i data-feather="check"></i> Publicaciones guardadas</li>
+              <li class="off"><i data-feather="x"></i> Análisis de comentarios</li>
+            </ul>
+
+            <div class="nv-price-action">
+              <a href="https://app.netvora.org" class="nv-btn nv-btn-secondary nv-btn-block">
+                Empezar prueba gratis
+              </a>
+              <small>7 días · Sin tarjeta</small>
+            </div>
+          </article>
+
+
+          <!-- BASIC -->
+          <article class="nv-price-card nv-price-card-featured nv-reveal">
+
+            <div class="nv-popular-label">MÁS POPULAR</div>
+
+            <div class="nv-price-card-head">
+              <span class="nv-plan-label">PLAN BÁSICO</span>
+              <h3>Básico</h3>
+
+              <div class="nv-price">
+                <span class="currency">Bs</span>
+                <strong>200</strong>
+                <span class="period">/ mes</span>
+              </div>
+
+              <p>
+                Para seguir la conversación todos los días y entender rápidamente qué está pasando.
+              </p>
+            </div>
+
+            <div class="nv-price-divider"></div>
+
+            <ul class="nv-price-list">
+              <li><i data-feather="check"></i> Todo el análisis de publicaciones</li>
+              <li><i data-feather="check"></i> Radar de tendencias</li>
+              <li><i data-feather="check"></i> Temas nuevos, subiendo y bajando</li>
+              <li><i data-feather="check"></i> Sentimiento</li>
+              <li><i data-feather="check"></i> Personas, organizaciones y lugares</li>
+              <li><i data-feather="check"></i> Categorías</li>
+              <li><i data-feather="check"></i> Dashboard y gráficos</li>
+              <li><i data-feather="check"></i> Comparaciones por fechas</li>
+              <li><i data-feather="check"></i> Filtros, búsqueda y guardados</li>
+              <li><i data-feather="check"></i> Selección limitada de cuentas</li>
+              <li class="off"><i data-feather="x"></i> Análisis de comentarios</li>
+            </ul>
+
+            <div class="nv-price-action">
+              <a
+                href="mailto:ventas@netvora.org?subject=Plan%20B%C3%A1sico%20NetVora&body=Hola%2C%20quiero%20contratar%20el%20Plan%20B%C3%A1sico%20de%20NetVora."
+                class="nv-btn nv-btn-primary nv-btn-block"
+              >
+                Elegir Básico
+              </a>
+              <small>Bs 200 por mes</small>
+            </div>
+
+          </article>
+
+
+          <!-- PRO -->
+          <article class="nv-price-card nv-price-card-pro nv-reveal">
+
+            <div class="nv-price-card-head">
+              <span class="nv-plan-label nv-plan-label-pro">PLAN PRO</span>
+              <h3>Pro</h3>
+
+              <div class="nv-price">
+                <span class="currency">Bs</span>
+                <strong>2.000</strong>
+                <span class="period">/ mes</span>
+              </div>
+
+              <p>
+                Para entender la conversación completa: publicaciones más la reacción en comentarios.
+              </p>
+            </div>
+
+            <div class="nv-price-divider"></div>
+
+            <ul class="nv-price-list">
+              <li><i data-feather="check-circle"></i> Todo lo incluido en Básico</li>
+              <li><i data-feather="check-circle"></i> Selección ampliada de cuentas</li>
+              <li class="highlight"><i data-feather="message-circle"></i> Análisis de comentarios</li>
+              <li class="highlight"><i data-feather="activity"></i> Sentimiento de comentarios</li>
+              <li class="highlight"><i data-feather="user"></i> Personas en comentarios</li>
+              <li class="highlight"><i data-feather="briefcase"></i> Organizaciones en comentarios</li>
+              <li><i data-feather="check-circle"></i> Análisis más profundo de la reacción pública</li>
+            </ul>
+
+            <div class="nv-price-action">
+              <a
+                href="mailto:ventas@netvora.org?subject=Plan%20Pro%20NetVora&body=Hola%2C%20quiero%20contratar%20el%20Plan%20Pro%20de%20NetVora."
+                class="nv-btn nv-btn-accent nv-btn-block"
+              >
+                Elegir Pro
+              </a>
+              <small>Bs 2.000 por mes</small>
+            </div>
+
+          </article>
+
+        </div>
+
+
+        <!-- COMPARISON -->
+        <div class="nv-comparison nv-reveal">
+
+          <div class="nv-comparison-head">
+            <div>
+              <span class="nv-kicker">COMPARA</span>
+              <h3>Encuentra el plan correcto para ti.</h3>
+            </div>
+
+            <a href="mailto:ventas@netvora.org?subject=Consulta%20NetVora" class="nv-text-link">
+              ¿Tienes dudas? Hablemos
+              <i data-feather="arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="nv-table-wrap">
+            <table class="nv-plan-table">
+              <thead>
+                <tr>
+                  <th>Función</th>
+                  <th>Gratis</th>
+                  <th>Básico</th>
+                  <th>Pro</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>Análisis de publicaciones</td>
+                  <td><i data-feather="check"></i></td>
+                  <td><i data-feather="check"></i></td>
+                  <td><i data-feather="check"></i></td>
+                </tr>
+
+                <tr>
+                  <td>Radar de tendencias</td>
+                  <td><i data-feather="check"></i></td>
+                  <td><i data-feather="check"></i></td>
+                  <td><i data-feather="check"></i></td>
+                </tr>
+
+                <tr>
+                  <td>Sentimiento</td>
+                  <td><i data-feather="check"></i></td>
+                  <td><i data-feather="check"></i></td>
+                  <td><i data-feather="check"></i></td>
+                </tr>
+
+                <tr>
+                  <td>Personas, organizaciones y lugares</td>
+                  <td><i data-feather="check"></i></td>
+                  <td><i data-feather="check"></i></td>
+                  <td><i data-feather="check"></i></td>
+                </tr>
+
+                <tr>
+                  <td>Categorías, dashboard y gráficos</td>
+                  <td><i data-feather="check"></i></td>
+                  <td><i data-feather="check"></i></td>
+                  <td><i data-feather="check"></i></td>
+                </tr>
+
+                <tr>
+                  <td>Filtros, búsqueda y guardados</td>
+                  <td><i data-feather="check"></i></td>
+                  <td><i data-feather="check"></i></td>
+                  <td><i data-feather="check"></i></td>
+                </tr>
+
+                <tr>
+                  <td>Selección de cuentas</td>
+                  <td>Limitada</td>
+                  <td>Limitada</td>
+                  <td><strong>Ampliada</strong></td>
+                </tr>
+
+                <tr>
+                  <td>Análisis de comentarios</td>
+                  <td><span class="table-off">—</span></td>
+                  <td><span class="table-off">—</span></td>
+                  <td><i data-feather="check"></i></td>
+                </tr>
+
+                <tr>
+                  <td>Sentimiento de comentarios</td>
+                  <td><span class="table-off">—</span></td>
+                  <td><span class="table-off">—</span></td>
+                  <td><i data-feather="check"></i></td>
+                </tr>
+
+                <tr>
+                  <td>Entidades en comentarios</td>
+                  <td><span class="table-off">—</span></td>
+                  <td><span class="table-off">—</span></td>
+                  <td><i data-feather="check"></i></td>
+                </tr>
+
+                <tr class="nv-table-price-row">
+                  <td>Precio</td>
+                  <td><strong>Bs 0</strong></td>
+                  <td><strong>Bs 200/mes</strong></td>
+                  <td><strong>Bs 2.000/mes</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         FAQ
+    ========================================================== -->
+    <section class="nv-faq" id="faq">
+      <div class="nv-container">
+
+        <div class="nv-faq-grid">
+
+          <div class="nv-faq-heading nv-reveal">
+            <span class="nv-kicker">PREGUNTAS FRECUENTES</span>
+            <h2>Todo lo que necesitas saber antes de empezar.</h2>
+            <p>
+              Si todavía tienes alguna duda, puedes escribirnos y te ayudamos
+              a elegir la mejor forma de usar NetVora.
+            </p>
+
+            <a
+              href="mailto:ventas@netvora.org?subject=Consulta%20sobre%20NetVora"
+              class="nv-btn nv-btn-secondary"
+            >
+              Contactar
+              <i data-feather="mail"></i>
+            </a>
+          </div>
+
+
+          <div class="nv-faq-list">
+
+            <article class="nv-faq-item nv-reveal">
+              <button class="nv-faq-question" type="button" aria-expanded="false">
+                <span>¿Necesito saber de análisis de datos?</span>
+                <i data-feather="plus"></i>
+              </button>
+              <div class="nv-faq-answer">
+                <p>
+                  No. NetVora está pensado para mostrar la información de forma
+                  visual y fácil de entender, sin necesidad de conocimientos técnicos.
+                </p>
+              </div>
+            </article>
+
+            <article class="nv-faq-item nv-reveal">
+              <button class="nv-faq-question" type="button" aria-expanded="false">
+                <span>¿Qué puedo analizar con NetVora?</span>
+                <i data-feather="plus"></i>
+              </button>
+              <div class="nv-faq-answer">
+                <p>
+                  Puedes analizar las publicaciones de las cuentas disponibles
+                  en NetVora y filtrarlas por fechas, categorías, temas y otros criterios.
+                </p>
+              </div>
+            </article>
+
+            <article class="nv-faq-item nv-reveal">
+              <button class="nv-faq-question" type="button" aria-expanded="false">
+                <span>¿Qué es el Radar NetVora?</span>
+                <i data-feather="plus"></i>
+              </button>
+              <div class="nv-faq-answer">
+                <p>
+                  Es la vista que encuentra publicaciones relacionadas y las convierte
+                  en temas para mostrarte cuáles aparecen, cuáles crecen y cuáles pierden fuerza.
+                </p>
+              </div>
+            </article>
+
+            <article class="nv-faq-item nv-reveal">
+              <button class="nv-faq-question" type="button" aria-expanded="false">
+                <span>¿Cuál es la diferencia entre Básico y Pro?</span>
+                <i data-feather="plus"></i>
+              </button>
+              <div class="nv-faq-answer">
+                <p>
+                  Básico analiza publicaciones y la conversación principal.
+                  Pro añade el análisis de comentarios y respuestas, incluyendo
+                  su sentimiento y las entidades mencionadas.
+                </p>
+              </div>
+            </article>
+
+            <article class="nv-faq-item nv-reveal">
+              <button class="nv-faq-question" type="button" aria-expanded="false">
+                <span>¿Puedo probar NetVora antes de pagar?</span>
+                <i data-feather="plus"></i>
+              </button>
+              <div class="nv-faq-answer">
+                <p>
+                  Sí. Puedes utilizar durante 7 días las funciones incluidas
+                  en el Plan Básico para conocer la plataforma antes de contratar.
+                </p>
+              </div>
+            </article>
+
+            <article class="nv-faq-item nv-reveal">
+              <button class="nv-faq-question" type="button" aria-expanded="false">
+                <span>¿Cuánto cuesta?</span>
+                <i data-feather="plus"></i>
+              </button>
+              <div class="nv-faq-answer">
+                <p>
+                  El Plan Básico cuesta Bs 200 al mes y el Plan Pro cuesta
+                  Bs 2.000 al mes. La prueba inicial de 7 días es gratuita.
+                </p>
+              </div>
+            </article>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         FINAL CTA
+    ========================================================== -->
+    <section class="nv-final-cta">
+      <div class="nv-container">
+
+        <div class="nv-final-box nv-reveal">
+
+          <div class="nv-final-orb"></div>
+
+          <div class="nv-final-content">
+            <span class="nv-kicker nv-kicker-light">EMPIEZA HOY</span>
+
+            <h2>
+              Mientras otros leen la conversación,
+              <span>tú puedes entenderla.</span>
+            </h2>
+
+            <p>
+              Empieza con NetVora gratis durante 7 días y descubre
+              cuánto tiempo puedes ahorrar encontrando lo importante.
+            </p>
+
+            <div class="nv-final-actions">
+              <a href="https://app.netvora.org" class="nv-btn nv-btn-white nv-btn-xl">
+                Probar NetVora gratis
+                <i data-feather="arrow-right"></i>
+              </a>
+
+              <a
+                href="mailto:ventas@netvora.org?subject=Quiero%20conocer%20NetVora"
+                class="nv-final-link"
+              >
+                Hablar con nosotros
+              </a>
+            </div>
+
+            <div class="nv-final-mini">
+              <span><i data-feather="check"></i> 7 días gratis</span>
+              <span><i data-feather="check"></i> Sin tarjeta</span>
+              <span><i data-feather="check"></i> Básico desde Bs 200/mes</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- =========================================================
+       FOOTER
+  ========================================================== -->
+  <footer class="nv-footer">
+
+    <div class="nv-container">
+
+      <div class="nv-footer-grid">
+
+        <div class="nv-footer-brand">
+          <img
+            src="assets/images/logo2.png"
+            alt="NetVora"
+            class="nv-footer-logo"
+          />
+
+          <p>
+            Convierte miles de publicaciones en una vista clara de
+            qué está pasando, quién participa y cómo cambia la conversación.
+          </p>
+
+          <span class="nv-made">
+            Hecho en Bolivia 🇧🇴
+          </span>
+        </div>
+
+
+        <div class="nv-footer-column">
+          <h4>Producto</h4>
+          <a href="#producto">Cómo funciona</a>
+          <a href="#radar">Radar NetVora</a>
+          <a href="#pro">NetVora Pro</a>
+          <a href="#pricing">Planes</a>
+        </div>
+
+        <div class="nv-footer-column">
+          <h4>Cuenta</h4>
+          <a href="https://app.netvora.org">Ingresar</a>
+          <a href="https://app.netvora.org">Probar gratis</a>
+          <a href="mailto:ventas@netvora.org">Contacto</a>
+        </div>
+
+        <div class="nv-footer-column">
+          <h4>Información</h4>
+          <a href="#faq">Preguntas frecuentes</a>
+          <a href="mailto:ventas@netvora.org?subject=Soporte%20NetVora">Soporte</a>
+          <a href="mailto:ventas@netvora.org?subject=Ventas%20NetVora">Ventas</a>
+        </div>
+
+      </div>
+
+
+      <div class="nv-footer-bottom">
+        <span>© <span id="nvYear"></span> NetVora. Todos los derechos reservados.</span>
+
+        <a href="#top" class="nv-back-top">
+          Volver arriba
+          <i data-feather="arrow-up"></i>
         </a>
       </div>
-    </div>
-  </section>
 
-  <!-- FOOTER -->
-  <footer class="nv-footer">
-    <div class="nv-footer-inner">
-
-      <div class="nv-footer-brand">
-        <div class="nv-footer-logo-row">
-          <img src="assets/images/logo2.png" class="nv-footer-logo" alt="NetVora" />
-          <div>
-            <div class="nv-footer-name">NetVora</div>
-            <div class="nv-footer-tagline">Entiende la conversación digital de forma simple.</div>
-          </div>
-        </div>
-
-        <p class="nv-footer-desc">
-          Sigue las cuentas que te importan, descubre los temas que crecen y entiende
-          quién participa y cómo cambia la conversación.
-        </p>
-      </div>
-
-      <div class="nv-footer-links">
-        <div class="nv-footer-col">
-          <div class="nv-footer-title">Producto</div>
-          <a href="#features" class="nv-footer-link">Qué puedes ver</a>
-          <a href="#how" class="nv-footer-link">Cómo funciona</a>
-          <a href="#pricing" class="nv-footer-link">Planes</a>
-        </div>
-
-        <div class="nv-footer-col">
-          <div class="nv-footer-title">Cuenta</div>
-          <a href="https://app.netvora.org" class="nv-footer-link">Ingresar</a>
-          <a
-            href="mailto:ventas@netvora.org?subject=Contacto%20desde%20NetVora"
-            class="nv-footer-link"
-          >Contacto</a>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="nv-footer-bottom">
-      <span>© <span id="nv-year"></span> NetVora</span>
-      <span>Hecho en Bolivia</span>
     </div>
   </footer>
 
-  <!-- Volver arriba -->
-  <a class="nv-top" href="#home" title="Volver arriba" aria-label="Volver arriba">
-    <i data-feather="arrow-up"></i>
-  </a>
 
-  <!-- JS que ya usa tu proyecto -->
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="https://unpkg.com/feather-icons"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
-  <script src="assets/js/script.js"></script>
-
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="assets/js/script.js"></script>
 </body>
 </html>
